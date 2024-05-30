@@ -15,6 +15,9 @@
         android:theme="@style/Theme.Capstone"
         tools:targetApi="31">
         <activity
+            android:name=".view.detail.DetailFungusActivity"
+            android:exported="false" />
+        <activity
             android:name=".view.result.ResultActivity"
             android:exported="false" />
         <activity
@@ -44,7 +47,7 @@
             android:grantUriPermissions="true">
             <meta-data
                 android:name="android.support.FILE_PROVIDER_PATHS"
-                android:resource="@xml/file_paths"/>
+                android:resource="@xml/file_paths" />
         </provider>
     </application>
 

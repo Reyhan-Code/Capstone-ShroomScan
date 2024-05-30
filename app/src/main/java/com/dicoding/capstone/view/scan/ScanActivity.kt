@@ -7,22 +7,19 @@ import android.util.Log
 import android.widget.Toast
 import androidx.activity.result.PickVisualMediaRequest
 import androidx.activity.result.contract.ActivityResultContracts
+import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
+import androidx.lifecycle.Observer
 import com.dicoding.capstone.R
 import com.dicoding.capstone.databinding.ActivityScanBinding
 import com.dicoding.capstone.utils.getImageUri
-import com.dicoding.capstone.view.result.ResultActivity
 import com.yalantis.ucrop.UCrop
-import java.io.File
 
 class ScanActivity : AppCompatActivity() {
     private lateinit var binding: ActivityScanBinding
 
-//    private val viewModel: ScanViewModel by viewModels()
-
     private var currentImageUri: Uri? = null
-    private var croppedImage: Uri? = null
-
+    private val viewModel: ScanViewModel by viewModels()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -32,24 +29,21 @@ class ScanActivity : AppCompatActivity() {
         binding.cameraButton.setOnClickListener { startCamera() }
         binding.galleryButton.setOnClickListener { startGallery() }
         binding.analyzeButton.setOnClickListener {
-                currentImageUri?.let {
-                    analyzeImage(it)
-                    moveToResult()
-                } ?: run {
-                    showToast(getString(R.string.empty_image_warning))
-                }
+            viewModel.currentImageUri.value?.let {
+                viewModel.analyzeImage(this)
+                viewModel.moveToResult(this)
+            } ?: run {
+                viewModel.showToast(getString(R.string.empty_image_warning))
             }
+        }
 
-//        viewModel.currentImageUri.observe(this, Observer { uri ->
-//            uri?.let { showImage(it) }
-//        })
-//
-//        viewModel.croppedImageUri.observe(this, Observer { uri ->
-//            uri?.let { binding.previewImageView.setImageURI(it) }
-//        })
+        viewModel.croppedImage.observe(this, Observer { uri ->
+            uri?.let { binding.previewImageView.setImageURI(it) }
+        })
 
-
-
+        viewModel.toastMessage.observe(this, Observer { message ->
+            message?.let { showToast(it) }
+        })
 }
 
     private fun startGallery() {
@@ -60,18 +54,17 @@ class ScanActivity : AppCompatActivity() {
         ActivityResultContracts.PickVisualMedia()
     ) { uri: Uri? ->
         if (uri != null) {
-            currentImageUri = uri
+            viewModel.setCurrentImageUri(uri)
             showImage()
-            startUCrop(uri)
+            viewModel.currentImageUri.value?.let { viewModel.startUCrop(it, this) }
         } else {
             Log.d("Photo Picker", "No media selected")
         }
     }
 
-
     private fun startCamera() {
-        currentImageUri = getImageUri(this)
-        launcherIntentCamera.launch(currentImageUri!!)
+        viewModel.setCurrentImageUri(getImageUri(this))
+        viewModel.currentImageUri.value?.let { launcherIntentCamera.launch(it) }
     }
 
     private val launcherIntentCamera = registerForActivityResult(
@@ -79,21 +72,10 @@ class ScanActivity : AppCompatActivity() {
     ) { isSuccess ->
         if (isSuccess) {
             showImage()
-            currentImageUri?.let { startUCrop(it) }
+            viewModel.currentImageUri.value?.let { viewModel.startUCrop(it, this) }
         }else {
             Log.d("Photo Picker", "No media selected")
         }
-    }
-
-
-    private fun startUCrop(sourceUri: Uri) {
-        val fileName = "cropped_image_${System.currentTimeMillis()}.jpg"
-        val destinationUri = Uri.fromFile(File(cacheDir, fileName))
-
-        UCrop.of(sourceUri, destinationUri)
-            .withAspectRatio(1f, 1f)
-            .withMaxResultSize(1000, 1000)
-            .start(this)
     }
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
@@ -101,17 +83,12 @@ class ScanActivity : AppCompatActivity() {
         if (requestCode == UCrop.REQUEST_CROP && resultCode == RESULT_OK) {
             val resultUri = UCrop.getOutput(data!!)
             resultUri?.let {
-                CropImage(resultUri)
+                viewModel.setCroppedImage(it)
             } ?: showToast("Failed to crop image")
         } else if (resultCode == UCrop.RESULT_ERROR) {
             val cropError = UCrop.getError(data!!)
             showToast("Crop error: ${cropError?.message}")
         }
-    }
-
-    private fun CropImage(uri: Uri) {
-        binding.previewImageView.setImageURI(uri)
-        croppedImage = uri
     }
 
     private fun showImage() {
@@ -121,27 +98,7 @@ class ScanActivity : AppCompatActivity() {
         }
     }
 
-    private fun analyzeImage(uri: Uri) {
-        val intent = Intent(this, ResultActivity::class.java)
-        croppedImage?.let { uri ->
-            intent.putExtra(ResultActivity.EXTRA_IMAGE_URI, uri.toString())
-        } ?: showToast(getString(R.string.image_classifier_failed))
-    }
-
-    private fun moveToResult() {
-        Log.d(TAG, "Pindah Ke ResultActivity")
-        val intent = Intent(this, ResultActivity::class.java)
-        croppedImage?.let { uri ->
-            intent.putExtra(ResultActivity.EXTRA_IMAGE_URI, uri.toString())
-            startActivity(intent)
-        } ?: showToast(getString(R.string.image_classifier_failed))
-    }
-
     private fun showToast(message: String) {
         Toast.makeText(this, message, Toast.LENGTH_SHORT).show()
-    }
-
-    companion object {
-        const val TAG = "main_activity"
     }
 }

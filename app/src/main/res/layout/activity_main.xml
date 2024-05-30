@@ -32,17 +32,28 @@
         <androidx.recyclerview.widget.RecyclerView
             android:layout_width="match_parent"
             android:layout_height="match_parent" />
+
     </com.google.android.material.search.SearchView>
 
 
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline2"
+        android:layout_width="wrap_content"
+        android:layout_height="64dp"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintGuide_percent="0.5" />
+
     <LinearLayout
         android:id="@+id/btn_scan"
-        android:layout_width="180dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
         android:layout_marginTop="24dp"
-        app:layout_constraintEnd_toStartOf="@id/btn_recipe"
+        app:layout_constraintEnd_toStartOf="@+id/guideline2"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/searchBar">
+
         <include
             android:id="@+id/btn_scan_included"
             layout="@layout/custom_button_scan" />
@@ -50,14 +61,14 @@
 
     <LinearLayout
         android:id="@+id/btn_recipe"
-        android:layout_width="180dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
+      android:layout_marginEnd="10dp"
         android:layout_marginTop="24dp"
-        android:orientation="vertical"
-        app:layout_constraintStart_toEndOf="@id/btn_scan"
-        app:layout_constraintTop_toBottomOf="@+id/searchBar"
-        app:layout_constraintEnd_toEndOf="parent">
+        app:layout_constraintStart_toStartOf="@id/guideline2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/searchBar">
+
         <include
             android:id="@+id/btn_recipe_included"
             layout="@layout/custom_button_recipe" />
@@ -83,7 +94,7 @@
         app:layout_constraintVertical_bias="0.214" />
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rv_user"
+        android:id="@+id/rv_list"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginTop="8dp"
