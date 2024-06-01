@@ -21,10 +21,10 @@ class MainViewModel : ViewModel() {
 
 
     init {
-        findUsers()
+        findFungus()
     }
 
-    fun findUsers(query: String = "sidikpermana") {
+    fun findFungus(query: String = "") {
         _loading.value = true
         val apiService = ApiConfig.getApiService().getUsers(query)
         apiService.enqueue(object : Callback<GithubResponse> {

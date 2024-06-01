@@ -17,17 +17,8 @@ class ApiConfig {
                 } else {
                     HttpLoggingInterceptor.Level.NONE
                 }
-            val interceptor = Interceptor { chain ->
-                chain.proceed(
-                    chain.request().newBuilder()
-                        .addHeader("Authorization", BuildConfig.KEY)
-                        .build()
-                )
-            }
             val client = OkHttpClient.Builder()
                 .addInterceptor(loggingInterceptor)
-                .addInterceptor(loggingInterceptor)
-                .addInterceptor(interceptor)
                 .build()
 
             val getRetrofit = Retrofit.Builder()

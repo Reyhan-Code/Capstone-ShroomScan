@@ -17,9 +17,7 @@ android {
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
 
-
-        buildConfigField("String", "KEY", "\"Authorization: token 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\"")
-        buildConfigField("String", "BaseURL", "\"https://api.github.com/\"")
+        buildConfigField("String", "BaseURL", "\"http://34.128.70.250:3000/mushrooms\n/\"")
 
     }
 

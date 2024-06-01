@@ -21,4 +21,10 @@
     <string name="News">judul</string>
     <string name="link">link</string>
     <string name="title_favorite">Favorite</string>
+    <string name="name_fungus">name</string>
+    <string name="detail_fungus">Non-toxic</string>
+    <string name="detail_introduction">Jamur tiram adalah jamur pangan dari kelompok Basidiomycota dan termasuk kelas Homobasidiomycetes dengan ciri-ciri umum tubuh buah berwarna putih hingga krem dan tudungnya berbentuk setengah lingkaran mirip cangkang tiram dengan bagian tengah agak cekung</string>
+    <string name="_introduction">Introduction</string>
+    <string name="_planting">Planting media and Composition</string>
+    <string name="detail_planting">Media tanam Pleurotus ostreatus yang digunakan adalah jerami yang dicampur dengan air, dedak 10% dan kapur 1%.[13] Fungsi dari jerami adalah sebagai bahan dasar dari pertumbuhan jamur.</string>
 </resources>
