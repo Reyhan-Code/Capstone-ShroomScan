@@ -8,4 +8,7 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="oren">#F0F66A5F</color>
+    <color name="ungu">#F0C1C1C1</color>
+    <color name="button_background_color">#FFFFFF</color>
+    <color name="border_color">#FF000000</color>
 </resources>

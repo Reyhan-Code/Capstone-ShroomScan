@@ -10,10 +10,11 @@ import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.bumptech.glide.load.resource.drawable.DrawableTransitionOptions
 import com.dicoding.capstone.databinding.ItemListBinding
+import com.dicoding.capstone.remote.response.DataItem
 import com.dicoding.capstone.remote.response.ItemsItem
 import com.dicoding.capstone.view.detail.DetailFungusActivity
 
-class ListFungusAdapter : ListAdapter<ItemsItem, ListFungusAdapter.MyViewHolder>(DIFF_CALLBACK) {
+class ListFungusAdapter : ListAdapter<DataItem, ListFungusAdapter.MyViewHolder>(DIFF_CALLBACK) {
 
 
 
@@ -30,17 +31,17 @@ class ListFungusAdapter : ListAdapter<ItemsItem, ListFungusAdapter.MyViewHolder>
 
     class MyViewHolder(private val binding: ItemListBinding) :
         RecyclerView.ViewHolder(binding.root) {
-        fun bind(user: ItemsItem) {
+        fun bind(user: DataItem) {
             with(binding) {
                 val arguments = Bundle()
-                arguments.putString(USERNAME_KEY, user.login)
-                arguments.putString(BIO_KEY, user.followersUrl)
+                arguments.putString(USERNAME_KEY, user.nama)
+                arguments.putString(BIO_KEY, user.jenis)
                 Glide.with(itemView)
-                    .load(user.avatarUrl)
+                    .load(user.gambar)
                     .transition(DrawableTransitionOptions.withCrossFade())
                     .into(tvImage)
-                tvName.text = user.login
-                tvDescription.text = user.followersUrl
+                tvName.text = user.nama
+                tvDescription.text = user.jenis
                 root.setOnClickListener {
                     val intent =
                         Intent(it.context, DetailFungusActivity::class.java).putExtras(arguments)
@@ -55,12 +56,12 @@ class ListFungusAdapter : ListAdapter<ItemsItem, ListFungusAdapter.MyViewHolder>
         const val USERNAME_KEY = "username"
         const val BIO_KEY = "bio"
 
-        val DIFF_CALLBACK = object : DiffUtil.ItemCallback<ItemsItem>() {
-            override fun areItemsTheSame(oldItem: ItemsItem, newItem: ItemsItem): Boolean {
+        val DIFF_CALLBACK = object : DiffUtil.ItemCallback<DataItem>() {
+            override fun areItemsTheSame(oldItem: DataItem, newItem: DataItem): Boolean {
                 return oldItem == newItem
             }
 
-            override fun areContentsTheSame(oldItem: ItemsItem, newItem: ItemsItem): Boolean {
+            override fun areContentsTheSame(oldItem: DataItem, newItem: DataItem): Boolean {
                 return oldItem == newItem
             }
         }

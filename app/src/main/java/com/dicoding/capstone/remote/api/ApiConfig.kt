@@ -21,8 +21,15 @@ class ApiConfig {
                 .addInterceptor(loggingInterceptor)
                 .build()
 
-            val getRetrofit = Retrofit.Builder()
-                .baseUrl(BuildConfig.BaseURL)
+            // Pastikan baseUrl diakhiri dengan tanda garis miring
+            val baseUrl = if (BuildConfig.BaseURL.endsWith("/")) {
+                BuildConfig.BaseURL
+            } else {
+                BuildConfig.BaseURL + "/"
+            }
+
+            val getRetrofit= Retrofit.Builder()
+                .baseUrl(baseUrl)
                 .addConverterFactory(GsonConverterFactory.create())
                 .client(client)
                 .build()

@@ -16,6 +16,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.dicoding.capstone.R
 import com.dicoding.capstone.adapter.ListFungusAdapter
 import com.dicoding.capstone.databinding.ActivityMainBinding
+import com.dicoding.capstone.remote.response.DataItem
 import com.dicoding.capstone.remote.response.ItemsItem
 import com.dicoding.capstone.view.recipe.RecipeActivity
 import com.dicoding.capstone.view.scan.ScanActivity
@@ -86,7 +87,7 @@ class MainActivity : AppCompatActivity() {
         startActivity(intent)
     }
 
-    private fun setDataUser(users: List<ItemsItem>) {
+    private fun setDataUser(users: List<DataItem>) {
         val adapter = ListFungusAdapter()
         adapter.submitList(users)
         binding.rvList.adapter = adapter

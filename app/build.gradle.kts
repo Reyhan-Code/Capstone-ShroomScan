@@ -17,8 +17,8 @@ android {
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
 
-        buildConfigField("String", "BaseURL", "\"http://34.128.70.250:3000/mushrooms\n/\"")
 
+        buildConfigField("String", "BaseURL", "\"http://34.128.70.250:3000/\"")
     }
 
     buildTypes {
@@ -81,6 +81,6 @@ dependencies {
     implementation("androidx.recyclerview:recyclerview:1.3.2")
     implementation ("androidx.activity:activity-ktx:1.4.0")
 
-
+    implementation ("com.google.android.material:material:1.4.0")
 
 }

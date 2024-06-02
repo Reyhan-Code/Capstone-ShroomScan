@@ -21,10 +21,13 @@
     <string name="News">judul</string>
     <string name="link">link</string>
     <string name="title_favorite">Favorite</string>
-    <string name="name_fungus">name</string>
+    <string name="name_fungus">Jamur tiram</string>
     <string name="detail_fungus">Non-toxic</string>
-    <string name="detail_introduction">Jamur tiram adalah jamur pangan dari kelompok Basidiomycota dan termasuk kelas Homobasidiomycetes dengan ciri-ciri umum tubuh buah berwarna putih hingga krem dan tudungnya berbentuk setengah lingkaran mirip cangkang tiram dengan bagian tengah agak cekung</string>
+    <string name="detail_introduction">Jamur tiram adalah jamur pangan dari kelompok Basidiomycota dan termasuk kelas Homobasidiomycetes dengan ciri-ciri umum tubuh buah berwarna putih hingga krem dan tudungnya berbentuk setengah lingkaran mirip cangkang tiram dengan bagian tengah agak cekung. Tubuh buah jamur tiram memiliki tangkai yang tumbuh menyamping (bahasa Latin: pleurotus) dan bentuknya seperti tiram (ostreatus) sehingga jamur tiram mempunyai nama binomial Pleurotus ostreatus.[2] Bagian tudung dari jamur tersebut berubah warna dari hitam, abu-abu, coklat, hingga putih, dengan permukaan yang hampir licin, diameter 5–20 cm yang bertepi tudung mulus sedikit berlekuk.[1] Selain itu, jamur tiram juga memiliki spora berbentuk batang berukuran serta miselia berwarna putih yang bisa tumbuh dengan cepat</string>
     <string name="_introduction">Introduction</string>
     <string name="_planting">Planting media and Composition</string>
-    <string name="detail_planting">Media tanam Pleurotus ostreatus yang digunakan adalah jerami yang dicampur dengan air, dedak 10% dan kapur 1%.[13] Fungsi dari jerami adalah sebagai bahan dasar dari pertumbuhan jamur.</string>
+    <string name="detail_planting">Media tanam Pleurotus ostreatus yang digunakan adalah jerami yang dicampur dengan air, dedak 10% dan kapur 1%.[13] Fungsi dari jerami adalah sebagai bahan dasar dari pertumbuhan jamur. Jerami mengandung lignin, selulosa, karbohidrat, dan serat yang dapat didegradasi oleh jamur menjadi karbohidrat yang kemudian dapat digunakan untuk sintesis protein.[13] Air pada jerami berfungsi sebagai pembentuk kelembapan dan sumber air bagi pertunbuhan jamur.[13] Dedak dan kapur merupakan bahan tambahan pada media tanam Pleurotus ostreatus.[13] Dedak ditambahkan pada media untuk meningkatkan nutrisi media tanam, terutama sebagai sumber karbohidrat, karbon, dan nitrogen.[13] Kapur merupakan sumber kalsium bagi pertumbuhan jamur.[5] Selain itu juga kapur berfungsi untuk mengatur pH media pertumbuhan jamur.[13]</string>
+    <string name="btn_left">button left</string>
+    <string name="gambar_detail">gambar deskripsion</string>
+    <string name="get_result">Get Result</string>
 </resources>
