@@ -3,9 +3,9 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
-    android:backgroundTint="#C1C1C1"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:backgroundTint="#C1C1C1"
     tools:context=".view.scan.ScanActivity">
 
     <com.google.android.material.progressindicator.LinearProgressIndicator
@@ -19,25 +19,29 @@
         app:layout_constraintTop_toTopOf="parent" />
 
 
-    <Button
+    <androidx.appcompat.widget.AppCompatImageButton
         android:id="@+id/galleryButton"
-        android:layout_width="0dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
         android:layout_marginEnd="8dp"
-        android:text="@string/gallery"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:contentDescription="@string/gallery"
+        android:src="@drawable/image"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.952"
         app:layout_constraintStart_toStartOf="@+id/guideline2"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <Button
+    <androidx.appcompat.widget.AppCompatImageButton
         android:id="@+id/cameraButton"
-        android:layout_width="0dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginTop="24dp"
-        android:text="@string/camera"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:contentDescription="@string/camera"
+        android:src="@drawable/camera"
         app:layout_constraintEnd_toStartOf="@+id/guideline2"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
@@ -57,7 +61,7 @@
         android:layout_width="296dp"
         android:layout_height="296dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="124dp"
+        android:layout_marginTop="164dp"
         android:layout_marginEnd="8dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.494"
@@ -71,7 +75,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginEnd="8dp"
-        android:background="@drawable/button_background"
+        android:background="@drawable/button_custom"
         android:drawableStart="@drawable/scan"
         android:fontFamily="@font/inter_bold"
         android:padding="8dp"

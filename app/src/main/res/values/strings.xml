@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Capstone</string>
+    <string name="app_name">ShroomScan</string>
     <string name="searchbar_hint">Search Mushroom</string>
     <string name="explore">Explore</string>
     <string name="menu_1">Menu 1</string>
@@ -10,7 +10,6 @@
     <string name="recipe_info">Search Mushroom Recipes...</string>
 
 
-    <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="camera_x">CameraX</string>
     <string name="camera">Kamera</string>
     <string name="gallery">Galeri</string>
