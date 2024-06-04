@@ -1,0 +1,5 @@
+/node_modules
+.env
+package-lock.json
+db_shroomscan.sql
+Dockerfile
