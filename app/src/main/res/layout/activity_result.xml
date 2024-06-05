@@ -6,23 +6,73 @@
     android:layout_height="match_parent"
     tools:context=".view.result.ResultActivity">
 
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        app:layout_constraintTop_toTopOf="parent">
 
-        <ImageView
-            android:id="@+id/result_image"
+        <FrameLayout
             android:layout_width="match_parent"
-            android:layout_height="400dp"
-            android:scaleType="fitCenter"
-            app:srcCompat="@drawable/ic_image"/>
+            android:layout_height="300dp">
 
-        <TextView
-            android:id="@+id/result_text"
+            <ImageView
+                android:id="@+id/result_image_background"
+                android:layout_width="match_parent"
+                android:layout_height="260dp"
+                android:scaleType="centerCrop"
+                app:srcCompat="@drawable/tiram" />
+
+            <ImageView
+                android:id="@+id/result_image"
+                android:layout_width="170dp"
+                android:layout_height="110dp"
+                android:layout_gravity="end|bottom"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="10dp"
+                android:background="@drawable/rounded_corners"
+                android:scaleType="centerCrop"
+                app:srcCompat="@drawable/tiram" />
+
+        </FrameLayout>
+
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="16dp"
-            android:text="@string/result" />
+            android:layout_marginTop="15dp"
+            android:background="@drawable/rounded_background"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/result_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="15dp"
+                android:fontFamily="@font/inter_bold"
+                android:text="@string/result"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/detail_planting"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="50dp"
+                android:fontFamily="@font/inter"
+                android:textColor="@color/black"
+                android:textSize="15sp"
+                android:text="@string/detail_planting" />
+        </LinearLayout>
     </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>

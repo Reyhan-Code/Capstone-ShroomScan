@@ -29,4 +29,6 @@
     <string name="btn_left">button left</string>
     <string name="gambar_detail">gambar deskripsion</string>
     <string name="get_result">Get Result</string>
+    <string name="recipe_name">Jamur tiram pedas</string>
+    <string name="recipe_description">500 gram jamur tiram putih\", \"5 buah bawang merah\",\" 3 buah bawang putih\", \"10 buah cabe rawit merah (boleh di skip jika tidak suka pedas)\", \"2 sdm kecap manis\",\" 1 sdm gula pasir\",\"2 sdm kaldu bubuk\"</string>
 </resources>

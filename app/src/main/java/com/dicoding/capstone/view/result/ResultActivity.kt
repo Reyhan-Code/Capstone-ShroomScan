@@ -59,6 +59,7 @@ class ResultActivity : AppCompatActivity() {
     private fun displayImage(uri: Uri) {
         Log.d(TAG, "Displaying image: $uri")
         binding.resultImage.setImageURI(uri)
+        binding.resultImageBackground.setImageURI(uri)
     }
 
     companion object {

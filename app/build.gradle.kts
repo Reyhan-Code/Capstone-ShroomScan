@@ -2,6 +2,7 @@ plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.jetbrains.kotlin.android)
     id("kotlin-parcelize")
+    id("com.google.devtools.ksp")
 }
 
 android {
@@ -31,11 +32,11 @@ android {
         }
     }
     compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_1_8
-        targetCompatibility = JavaVersion.VERSION_1_8
+        sourceCompatibility = JavaVersion.VERSION_17
+        targetCompatibility = JavaVersion.VERSION_17
     }
     kotlinOptions {
-        jvmTarget = "1.8"
+        jvmTarget = "17"
     }
 
     buildFeatures {
@@ -43,6 +44,7 @@ android {
         buildConfig = true
         mlModelBinding = true
     }
+
 }
 
 dependencies {
@@ -59,28 +61,38 @@ dependencies {
 
 
     // LiveData
-    implementation ("androidx.lifecycle:lifecycle-viewmodel-ktx:2.4.0")
-    implementation ("androidx.lifecycle:lifecycle-livedata-ktx:2.4.0")
+    implementation (libs.androidx.lifecycle.viewmodel.ktx)
+    implementation (libs.androidx.lifecycle.livedata.ktx)
 
     // Library TensorFlow Lite
-    implementation("org.tensorflow:tensorflow-lite-task-vision:0.4.4")
-    implementation("org.tensorflow:tensorflow-lite-support:0.4.4")
-    implementation("org.tensorflow:tensorflow-lite-metadata:0.4.4")
+    implementation(libs.tensorflow.lite.task.vision)
+    implementation(libs.tensorflow.lite.support)
+    implementation(libs.tensorflow.lite.metadata)
 
     // Ucrop
-    implementation ("com.github.yalantis:ucrop:2.2.8")
-    implementation("io.coil-kt:coil:2.6.0")
-    implementation("com.github.bumptech.glide:glide:4.16.0")
+    implementation (libs.ucrop)
+    implementation(libs.coil)
+    implementation(libs.glide)
 
     // Api Libary
-    implementation("com.squareup.retrofit2:retrofit:2.9.0")
-    implementation("com.squareup.retrofit2:converter-gson:2.9.0")
-    implementation("com.squareup.okhttp3:logging-interceptor:4.11.0")
+    implementation(libs.retrofit)
+    implementation(libs.converter.gson)
+    implementation(libs.logging.interceptor)
+
+    // Room
+    implementation(libs.androidx.room.runtime)
+    implementation(libs.androidx.room.ktx)
+    ksp (libs.androidx.room.compiler)
+
 
     // other
-    implementation("androidx.recyclerview:recyclerview:1.3.2")
-    implementation ("androidx.activity:activity-ktx:1.4.0")
+    implementation(libs.androidx.recyclerview)
+    implementation (libs.androidx.activity.ktx)
 
-    implementation ("com.google.android.material:material:1.4.0")
+    implementation (libs.material)
+
+    implementation(libs.gson)
+
+
 
 }

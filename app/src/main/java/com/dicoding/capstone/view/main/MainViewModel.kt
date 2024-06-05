@@ -7,13 +7,12 @@ import androidx.lifecycle.ViewModel
 import com.dicoding.capstone.remote.api.ApiConfig
 import com.dicoding.capstone.remote.response.DataItem
 import com.dicoding.capstone.remote.response.FungusResponse
-import com.dicoding.capstone.remote.response.GithubResponse
-import com.dicoding.capstone.remote.response.ItemsItem
+import com.dicoding.capstone.repository.FungusRepository
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
 
-class MainViewModel : ViewModel() {
+class MainViewModel(repository: FungusRepository) : ViewModel() {
 
     private val _userData = MutableLiveData<List<DataItem>?>()
     val userData: LiveData<List<DataItem>?> = _userData

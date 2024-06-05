@@ -16,6 +16,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.dicoding.capstone.R
 import com.dicoding.capstone.adapter.ListFungusAdapter
 import com.dicoding.capstone.databinding.ActivityMainBinding
+import com.dicoding.capstone.factory.ViewModelFactory
 import com.dicoding.capstone.remote.response.DataItem
 import com.dicoding.capstone.remote.response.ItemsItem
 import com.dicoding.capstone.view.recipe.RecipeActivity
@@ -25,7 +26,9 @@ class MainActivity : AppCompatActivity() {
 
     private lateinit var binding : ActivityMainBinding
 
-    private val mainViewModel by viewModels<MainViewModel>()
+    private val mainViewModel by viewModels<MainViewModel> {
+        ViewModelFactory.getInstance(this)
+    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
