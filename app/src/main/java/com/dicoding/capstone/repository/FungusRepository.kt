@@ -6,7 +6,7 @@ import com.dicoding.capstone.remote.database.FungusDao
 import com.dicoding.capstone.remote.database.FungusEntity
 
 class FungusRepository private constructor(
-    private val fungusDao: FungusDao,
+    private val fungusDao: FungusDao
 ) {
 
     fun getRecipe(): LiveData<List<FungusEntity>> {

@@ -31,4 +31,13 @@
     <string name="get_result">Get Result</string>
     <string name="recipe_name">Jamur tiram pedas</string>
     <string name="recipe_description">500 gram jamur tiram putih\", \"5 buah bawang merah\",\" 3 buah bawang putih\", \"10 buah cabe rawit merah (boleh di skip jika tidak suka pedas)\", \"2 sdm kecap manis\",\" 1 sdm gula pasir\",\"2 sdm kaldu bubuk\"</string>
+    <string name="_recipe">Bahan-Bahan :</string>
+    <string name="time">waktu</string>
+    <string name="waktu_masak">10 menit</string>
+    <string name="_porsi">4 porsi</string>
+    <string name="detail_bahan">500 gram jamur tiram putih\n5 buah bawang merah\n3 buah bawang putih\n10 buah cabe rawit merah (boleh di skip jika tidak suka pedas)\n2 sdm kecap manis\n1 sdm gula pasir\n2 sdm kaldu bubuk\n</string>
+    <string name="cara_membuat">Cara Membuat :</string>
+    <string name="detail_recipe"> 1. Pertama cuci bersih jamur nya lalu sisih kan.\n\n2. siap kan bawang2an dan cabe2an dihalus kan lalu sisihkan.\n\n3. Panas kan sedikit minyak lalu tumis bumbu halus tadi hingga harum.\n\n4. kemudian masukan gula merah td sampai gula nya larut.\n\n5. Setelah semua bumbu menyatu dan harum masukan jamur tiram berikan kaldu bubuk dan gula pasir juga kecap manis aduk hingga rata.\n\n6. oh ya disini jamur tiram akan mengeluarkan air ya masak hingga jamur layu jd masak sampai airnya agak berkurang.\n\n7. Jangan lupa tes rasa jika ada yg kurang pas boleh di tambah sesuai selera bunda ya...setelah jamur matang dan layu angkat dan sajikan.\n\n8. Selamat mencoba ya bund</string>
+    <string name="favorite">Favorite</string>
+    <string name="searchbar_recipe">Searching recipe...</string>
 </resources>

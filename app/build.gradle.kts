@@ -61,8 +61,8 @@ dependencies {
 
 
     // LiveData
-    implementation (libs.androidx.lifecycle.viewmodel.ktx)
-    implementation (libs.androidx.lifecycle.livedata.ktx)
+    implementation(libs.androidx.lifecycle.viewmodel.ktx)
+    implementation(libs.androidx.lifecycle.livedata.ktx)
 
     // Library TensorFlow Lite
     implementation(libs.tensorflow.lite.task.vision)
@@ -70,7 +70,7 @@ dependencies {
     implementation(libs.tensorflow.lite.metadata)
 
     // Ucrop
-    implementation (libs.ucrop)
+    implementation(libs.ucrop)
     implementation(libs.coil)
     implementation(libs.glide)
 
@@ -82,17 +82,19 @@ dependencies {
     // Room
     implementation(libs.androidx.room.runtime)
     implementation(libs.androidx.room.ktx)
-    ksp (libs.androidx.room.compiler)
+    ksp(libs.androidx.room.compiler)
 
 
     // other
     implementation(libs.androidx.recyclerview)
-    implementation (libs.androidx.activity.ktx)
+    implementation(libs.androidx.activity.ktx)
 
-    implementation (libs.material)
+    implementation(libs.material)
 
     implementation(libs.gson)
 
+    // Circle image
+    implementation(libs.circleimageview)
 
 
 }

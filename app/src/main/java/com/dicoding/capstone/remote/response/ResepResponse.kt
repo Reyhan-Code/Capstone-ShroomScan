@@ -6,5 +6,7 @@ data class ResepResponse(
     val name_recipe: String,
     val ingredients: List<String>,
     val howToMake: List<String>,
+    val time: String,
+    val portion: String,
     val photoUrl: String,
 )

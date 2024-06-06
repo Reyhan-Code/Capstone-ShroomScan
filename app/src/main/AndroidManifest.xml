@@ -16,6 +16,9 @@
         android:theme="@style/Theme.Capstone"
         tools:targetApi="31">
         <activity
+            android:name=".view.favorit.FavoriteActivity"
+            android:exported="false" />
+        <activity
             android:name=".view.recipe.detail.DetailRecipeActivity"
             android:exported="false" />
         <activity

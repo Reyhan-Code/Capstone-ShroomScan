@@ -23,6 +23,12 @@ class FungusEntity(
     @ColumnInfo(name = "howToMake")
     var howToMake: String? = null,
 
+    @ColumnInfo(name = "time")
+    var time: String? = null,
+
+    @ColumnInfo(name = "portion")
+    var portion: String? = null,
+
     @ColumnInfo(name = "photoUrl")
     var photoUrl: String? = null,
 

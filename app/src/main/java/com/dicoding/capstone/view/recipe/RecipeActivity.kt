@@ -1,7 +1,10 @@
 package com.dicoding.capstone.view.recipe
 
+import android.content.Intent
 import android.os.Bundle
 import android.util.Log
+import android.view.MenuItem
+import android.widget.Toolbar
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
@@ -20,6 +23,7 @@ import com.dicoding.capstone.remote.response.ResepResponse
 import com.google.gson.Gson
 import com.google.gson.JsonParser
 import com.dicoding.capstone.data.Result
+import com.dicoding.capstone.view.favorit.FavoriteActivity
 import com.google.gson.reflect.TypeToken
 import java.io.InputStreamReader
 
@@ -55,6 +59,9 @@ class RecipeActivity : AppCompatActivity() {
                 viewModel.saveRecipe(recipe)
             }
         }
+
+        binding.rvRecipe.layoutManager = LinearLayoutManager(this)
+        binding.rvRecipe.adapter = recipeAdapter
 
         getAllRecipe().observe(this) { result ->
             if (result != null) {
@@ -92,6 +99,26 @@ class RecipeActivity : AppCompatActivity() {
                     searchView.hide()
                     false
                 }
+
+            searchBar.setOnMenuItemClickListener(object : MenuItem.OnMenuItemClickListener,
+                Toolbar.OnMenuItemClickListener,
+                androidx.appcompat.widget.Toolbar.OnMenuItemClickListener {
+                override fun onMenuItemClick(item: MenuItem): Boolean {
+                    return when (item.itemId) {
+                        R.id.favorite -> {
+                            val favoriteIntent =
+                                Intent(this@RecipeActivity, FavoriteActivity::class.java)
+                            Log.d("scan", "Pindah ke Favorite Activity")
+                            startActivity(favoriteIntent)
+                            true
+                        }
+
+                        else -> {
+                            false
+                        }
+                    }
+                }
+            })
         }
     }
 
@@ -109,15 +136,17 @@ class RecipeActivity : AppCompatActivity() {
         emit(Result.Loading)
         val fungusDao = FungusDb.getInstance(this@RecipeActivity).fungusDao()
         try {
-            val culinary = loadRecipeFromJson()
-            Log.d("Recipe", "Loaded recipes: $culinary")
-            val recipeList = culinary.map {
+            val recipe = loadRecipeFromJson()
+            Log.d("Recipe", "Loaded recipes: $recipe")
+            val recipeList = recipe.map {
                 val isFavorited = fungusDao.isFavorite(it.id)
                 FungusEntity(
                     it.id,
                     it.name_recipe,
                     it.ingredients.toString(),
                     it.howToMake.toString(),
+                    it.time,
+                    it.portion,
                     it.photoUrl,
                     isFavorited
                 )

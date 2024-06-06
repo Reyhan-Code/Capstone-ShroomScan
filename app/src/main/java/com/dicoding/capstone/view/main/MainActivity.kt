@@ -19,6 +19,7 @@ import com.dicoding.capstone.databinding.ActivityMainBinding
 import com.dicoding.capstone.factory.ViewModelFactory
 import com.dicoding.capstone.remote.response.DataItem
 import com.dicoding.capstone.remote.response.ItemsItem
+import com.dicoding.capstone.view.favorit.FavoriteActivity
 import com.dicoding.capstone.view.recipe.RecipeActivity
 import com.dicoding.capstone.view.scan.ScanActivity
 
@@ -71,6 +72,17 @@ class MainActivity : AppCompatActivity() {
                 }
                 }
 
+            binding.searchBar.setOnMenuItemClickListener { menuItem ->
+                when (menuItem.itemId) {
+                    R.id.favorite -> {
+                        val intent = Intent(this@MainActivity, FavoriteActivity::class.java)
+                        Log.d("scan", "Pindah ke Favorite Activity")
+                        startActivity(intent)
+                        true
+                    }
+                    else -> false
+                }
+            }
         }
 
         binding.btnScan.setOnClickListener { startScanActivity() }

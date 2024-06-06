@@ -15,6 +15,7 @@ import org.tensorflow.lite.task.vision.classifier.Classifications
 class ResultActivity : AppCompatActivity() {
     private lateinit var binding: ActivityResultBinding
 
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityResultBinding.inflate(layoutInflater)
