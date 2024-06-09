@@ -14,4 +14,14 @@
     </style>
 
     <style name="Theme.Capstone" parent="Base.Theme.Capstone" />
+
+    <style name="CustomCardView" parent="Widget.Material3.CardView.Elevated">
+        <item name="cardBackgroundColor">@color/design_default_color_on_secondary</item>
+        <item name="android:textColor">@color/design_default_color_on_primary</item>
+    </style>
+
+    <style name="CustomDetailCardView" parent="Widget.Material3.CardView.Elevated">
+        <item name="cardBackgroundColor">@color/design_default_color_on_secondary</item>
+        <item name="android:textColor">@color/design_default_color_on_primary</item>
+    </style>
 </resources>

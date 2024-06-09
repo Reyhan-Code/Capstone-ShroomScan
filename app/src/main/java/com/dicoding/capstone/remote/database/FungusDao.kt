@@ -30,4 +30,7 @@ interface FungusDao {
 
     @Query("SELECT EXISTS(SELECT * FROM recipe WHERE id = :id AND isFavorite = 1)")
     suspend fun isFavorite(id: String): Boolean
+
+    @Query("SELECT * FROM recipe WHERE name_recipe LIKE '%' || :query || '%'")
+    fun searchRecipe(query: String): LiveData<List<FungusEntity>>
 }

@@ -23,7 +23,7 @@ import org.tensorflow.lite.task.vision.classifier.ImageClassifier
 class ImageClassifierHelper(
     var threshold: Float = 0.1f,
     var maxResults: Int = 3,
-    val modelName: String = "modelAdit.tflite",
+    val modelName: String = "modelJamur.tflite",
     val context: Context,
     val classifierListener: ClassifierListener?
 ) {
@@ -79,9 +79,7 @@ class ImageClassifierHelper(
         val inferenceTime = SystemClock.uptimeMillis()
         val results = imageClassifier?.classify(tensorImage)
         val elapsedTime = SystemClock.uptimeMillis() - inferenceTime
-        classifierListener?.let { listener ->
-            listener.onResults(results, elapsedTime)
-        }
+        classifierListener?.onResults(results, elapsedTime)
         return results
     }
 

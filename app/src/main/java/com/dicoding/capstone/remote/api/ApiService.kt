@@ -11,9 +11,8 @@ import retrofit2.http.Query
 
 interface ApiService {
     @GET("mushrooms")
-    fun getUsers(
+    fun getFungus(
     ): Call<FungusResponse>
-
 
     @GET("users/{username}")
     fun getDetailUser(@Path("username") username: String): Call<DetailResponse>

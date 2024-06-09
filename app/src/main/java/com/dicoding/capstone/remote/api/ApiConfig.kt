@@ -21,7 +21,6 @@ class ApiConfig {
                 .addInterceptor(loggingInterceptor)
                 .build()
 
-            // Pastikan baseUrl diakhiri dengan tanda garis miring
             val baseUrl = if (BuildConfig.BaseURL.endsWith("/")) {
                 BuildConfig.BaseURL
             } else {

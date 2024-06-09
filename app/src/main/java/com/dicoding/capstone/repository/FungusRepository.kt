@@ -13,13 +13,17 @@ class FungusRepository private constructor(
         return fungusDao.getRecipe()
     }
 
-    fun getFavoriteCulinary(): LiveData<List<FungusEntity>> {
+    fun getFavoriteRecipe(): LiveData<List<FungusEntity>> {
         return fungusDao.getFavoriteRecipe()
     }
 
-    suspend fun setFavoriteCulinary(culinary: FungusEntity, newState: Boolean) {
-        culinary.isFavorite = newState
-        fungusDao.update(culinary)
+    fun searchRecipe(query: String): LiveData<List<FungusEntity>> {
+        return fungusDao.searchRecipe(query)
+    }
+
+    suspend fun setFavoriteRecipe(recipe: FungusEntity, newState: Boolean) {
+       recipe.isFavorite = newState
+        fungusDao.update(recipe)
     }
 
     companion object {

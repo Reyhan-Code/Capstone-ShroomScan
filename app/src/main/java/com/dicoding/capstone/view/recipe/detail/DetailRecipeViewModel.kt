@@ -1,4 +1,4 @@
-package com.dicoding.capstone.view.favorit
+package com.dicoding.capstone.view.recipe.detail
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
@@ -6,9 +6,7 @@ import com.dicoding.capstone.remote.database.FungusEntity
 import com.dicoding.capstone.repository.FungusRepository
 import kotlinx.coroutines.launch
 
-class FavoriteViewModel(private val repository: FungusRepository) : ViewModel() {
-
-    fun getFavoriteRecipe() = repository.getFavoriteRecipe()
+class DetailRecipeViewModel( private val repository: FungusRepository) : ViewModel() {
 
     fun saveRecipe(recipe: FungusEntity) {
         viewModelScope.launch {
@@ -21,4 +19,5 @@ class FavoriteViewModel(private val repository: FungusRepository) : ViewModel() 
             repository.setFavoriteRecipe(recipe, false)
         }
     }
+
 }

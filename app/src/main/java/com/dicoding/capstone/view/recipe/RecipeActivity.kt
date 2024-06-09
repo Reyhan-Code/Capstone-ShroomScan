@@ -97,6 +97,7 @@ class RecipeActivity : AppCompatActivity() {
                 .setOnEditorActionListener { textView, actionId, event ->
                     searchBar.setText(searchView.text)
                     searchView.hide()
+                    searchRecipe(searchView.text.toString())
                     false
                 }
 
@@ -159,5 +160,26 @@ class RecipeActivity : AppCompatActivity() {
         val localData: LiveData<Result<List<FungusEntity>>> =
             fungusDao.getRecipe().map { Result.Success(it) }
         emitSource(localData)
+    }
+
+
+    private fun searchRecipe(query: String) {
+        viewModel.searchRecipe(query).observe(this) { result ->
+            if (result != null) {
+                when (result) {
+                    is Result.Loading -> {
+                        Log.d("RecipeActivity", "Searching data...")
+                    }
+
+                    is Result.Success -> {
+                        Log.d("RecipeActivity", "Search results loaded successfully")
+                        (binding.rvRecipe.adapter as RecipeAdapter).submitList(result.data)
+                    }
+                    is Result.Error -> {
+                        Log.e("RecipeActivity", "Error searching recipes: ${result.error}")
+                    }
+                }
+            }
+        }
     }
 }

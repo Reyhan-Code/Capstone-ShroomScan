@@ -5,9 +5,11 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
 import com.dicoding.capstone.di.Injection
 import com.dicoding.capstone.repository.FungusRepository
+import com.dicoding.capstone.view.favorit.FavoriteViewModel
 import com.dicoding.capstone.view.main.MainViewModel
 import com.dicoding.capstone.view.recipe.RecipeActivity
 import com.dicoding.capstone.view.recipe.RecipeViewModel
+import com.dicoding.capstone.view.recipe.detail.DetailRecipeViewModel
 
 
 class ViewModelFactory(private val repository: FungusRepository) :
@@ -22,6 +24,14 @@ class ViewModelFactory(private val repository: FungusRepository) :
 
             modelClass.isAssignableFrom(RecipeViewModel::class.java) -> {
                 RecipeViewModel(repository) as T
+            }
+
+            modelClass.isAssignableFrom(DetailRecipeViewModel::class.java) -> {
+                DetailRecipeViewModel(repository) as T
+            }
+
+            modelClass.isAssignableFrom(FavoriteViewModel::class.java) -> {
+                FavoriteViewModel(repository) as T
             }
             else -> throw IllegalArgumentException("Unknown ViewModel class: " + modelClass.name)
         }

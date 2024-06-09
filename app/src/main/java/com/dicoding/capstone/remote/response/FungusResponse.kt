@@ -16,8 +16,14 @@ data class DataItem(
 	@field:SerializedName("nama")
 	val nama: String? = null,
 
-	@field:SerializedName("planting_media")
-	val plantingMedia: String? = null,
+	@field:SerializedName("gambar1")
+	val gambar1: String? = null,
+
+	@field:SerializedName("gambar3")
+	val gambar3: String? = null,
+
+	@field:SerializedName("gambar2")
+	val gambar2: String? = null,
 
 	@field:SerializedName("jenis")
 	val jenis: String? = null,
@@ -25,9 +31,9 @@ data class DataItem(
 	@field:SerializedName("id")
 	val id: Int? = null,
 
-	@field:SerializedName("gambar")
-	val gambar: String? = null,
+	@field:SerializedName("deskripsi")
+	val deskripsi: String? = null,
 
-	@field:SerializedName("introduction")
-	val introduction: String? = null
+	@field:SerializedName("media_tanam")
+	val mediaTanam: String? = null
 )

@@ -65,7 +65,7 @@ class MainActivity : AppCompatActivity() {
                     searchBar.setText(query)
                     Log.d("query", query)
                     searchView.hide()
-                    mainViewModel.findFungus(searchView.text.toString())
+                    mainViewModel.findFungus()
                     true
                 } else {
                     false

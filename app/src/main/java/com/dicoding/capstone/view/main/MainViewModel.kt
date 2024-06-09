@@ -25,9 +25,9 @@ class MainViewModel(repository: FungusRepository) : ViewModel() {
         findFungus()
     }
 
-    fun findFungus(query: String = "") {
+    fun findFungus() {
         _loading.value = true
-        val apiService = ApiConfig.getApiService().getUsers()
+        val apiService = ApiConfig.getApiService().getFungus()
         apiService.enqueue(object : Callback<FungusResponse> {
             override fun onResponse(
                 call: Call<FungusResponse>,
@@ -47,6 +47,7 @@ class MainViewModel(repository: FungusRepository) : ViewModel() {
             }
         })
     }
+
 
 
     companion object {

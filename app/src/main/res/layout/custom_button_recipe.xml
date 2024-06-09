@@ -2,7 +2,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="wrap_content"
     android:layout_height="60dp"
-    android:background="@drawable/custom_btn_recipe"
+    android:background="@drawable/background_3d_blue"
     android:gravity="center_vertical"
     android:padding="5dp"
     android:elevation="4dp">
@@ -25,13 +25,17 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/recipe"
-            android:textSize="16sp"
+            android:fontFamily="@font/inter_medium"
+            android:textSize="14sp"
             android:textColor="@android:color/white"/>
 
         <TextView
             android:id="@+id/btn_description"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:fontFamily="@font/inter_medium"
+            android:ellipsize="end"
+            android:maxLines="1"
             android:text="@string/recipe_info"
             android:textSize="9sp"
             android:textColor="@android:color/white"/>

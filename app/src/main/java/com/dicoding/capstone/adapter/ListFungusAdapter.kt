@@ -35,13 +35,12 @@ class ListFungusAdapter : ListAdapter<DataItem, ListFungusAdapter.MyViewHolder>(
             with(binding) {
                 val arguments = Bundle()
                 arguments.putString(USERNAME_KEY, user.nama)
-                arguments.putString(BIO_KEY, user.jenis)
                 Glide.with(itemView)
-                    .load(user.gambar)
+                    .load(user.gambar1)
                     .transition(DrawableTransitionOptions.withCrossFade())
                     .into(tvImage)
                 tvName.text = user.nama
-                tvDescription.text = user.jenis
+                tvDescription.text = user.deskripsi
                 root.setOnClickListener {
                     val intent =
                         Intent(it.context, DetailFungusActivity::class.java).putExtras(arguments)
@@ -54,7 +53,6 @@ class ListFungusAdapter : ListAdapter<DataItem, ListFungusAdapter.MyViewHolder>(
 
     companion object {
         const val USERNAME_KEY = "username"
-        const val BIO_KEY = "bio"
 
         val DIFF_CALLBACK = object : DiffUtil.ItemCallback<DataItem>() {
             override fun areItemsTheSame(oldItem: DataItem, newItem: DataItem): Boolean {

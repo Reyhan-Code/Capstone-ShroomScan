@@ -19,7 +19,7 @@ android {
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
 
 
-        buildConfigField("String", "BaseURL", "\"http://10.0.2.2:3000/\"")
+        buildConfigField("String", "BaseURL", "\"https://shroomscan-n54b4qblpq-et.a.run.app/\"")
     }
 
     buildTypes {
