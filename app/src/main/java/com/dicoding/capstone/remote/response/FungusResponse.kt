@@ -1,5 +1,7 @@
 package com.dicoding.capstone.remote.response
 
+import androidx.room.Entity
+import androidx.room.PrimaryKey
 import com.google.gson.annotations.SerializedName
 
 data class FungusResponse(
@@ -10,6 +12,7 @@ data class FungusResponse(
 	@field:SerializedName("status")
 	val status: String? = null
 )
+
 
 data class DataItem(
 
@@ -27,6 +30,7 @@ data class DataItem(
 
 	@field:SerializedName("jenis")
 	val jenis: String? = null,
+
 
 	@field:SerializedName("id")
 	val id: Int? = null,

@@ -11,17 +11,37 @@ import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import androidx.lifecycle.LiveData
+import androidx.lifecycle.Observer
+import androidx.lifecycle.ViewModelProvider
+import androidx.lifecycle.liveData
+import androidx.lifecycle.map
 import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 import com.dicoding.capstone.R
 import com.dicoding.capstone.adapter.ListFungusAdapter
+import com.dicoding.capstone.adapter.LoadingStateAdapter
+import com.dicoding.capstone.data.Result
 import com.dicoding.capstone.databinding.ActivityMainBinding
 import com.dicoding.capstone.factory.ViewModelFactory
+import com.dicoding.capstone.remote.api.ApiConfig
+import com.dicoding.capstone.remote.api.ApiService
+import com.dicoding.capstone.remote.database.FungusDb
+import com.dicoding.capstone.remote.database.fungus.FungusEntity
+import com.dicoding.capstone.remote.database.recipe.RecipeEntity
 import com.dicoding.capstone.remote.response.DataItem
+import com.dicoding.capstone.remote.response.FungusResponse
 import com.dicoding.capstone.remote.response.ItemsItem
+import com.dicoding.capstone.remote.response.ResepResponse
+import com.dicoding.capstone.repository.FungusRepository
 import com.dicoding.capstone.view.favorit.FavoriteActivity
 import com.dicoding.capstone.view.recipe.RecipeActivity
 import com.dicoding.capstone.view.scan.ScanActivity
+import com.google.gson.Gson
+import com.google.gson.JsonParser
+import com.google.gson.reflect.TypeToken
+import java.io.InputStreamReader
 
 class MainActivity : AppCompatActivity() {
 
@@ -30,6 +50,7 @@ class MainActivity : AppCompatActivity() {
     private val mainViewModel by viewModels<MainViewModel> {
         ViewModelFactory.getInstance(this)
     }
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -46,6 +67,8 @@ class MainActivity : AppCompatActivity() {
 
         val itemDecoration = DividerItemDecoration(this, layoutManager.orientation)
         binding.rvList.addItemDecoration(itemDecoration)
+
+
 
 
         with(mainViewModel) {
@@ -85,10 +108,12 @@ class MainActivity : AppCompatActivity() {
             }
         }
 
+
+
         binding.btnScan.setOnClickListener { startScanActivity() }
         binding.btnRecipe.setOnClickListener { startRecipeActivity() }
 
-   }
+  }
 
     private fun startScanActivity() {
         val intent = Intent(this, ScanActivity::class.java)
@@ -107,6 +132,8 @@ class MainActivity : AppCompatActivity() {
         adapter.submitList(users)
         binding.rvList.adapter = adapter
     }
+
+
 
     fun showLoading(isLoading: Boolean) {
         if (isLoading) {

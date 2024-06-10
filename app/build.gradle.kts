@@ -37,6 +37,7 @@ android {
     }
     kotlinOptions {
         jvmTarget = "17"
+        freeCompilerArgs += listOf("-Xopt-in=kotlin.RequiresOptIn")
     }
 
     buildFeatures {
@@ -96,5 +97,7 @@ dependencies {
     // Circle image
     implementation(libs.circleimageview)
 
-
+    //pagging
+    implementation(libs.androidx.room.paging)
+    implementation(libs.androidx.paging.runtime.ktx)
 }

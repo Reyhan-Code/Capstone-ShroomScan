@@ -1,4 +1,6 @@
 package com.dicoding.capstone.view.detail
 
-class DetailFungusViewModel {
+import androidx.lifecycle.ViewModel
+
+class DetailFungusViewModel : ViewModel() {
 }

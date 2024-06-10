@@ -4,6 +4,7 @@ import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.ViewGroup
+import androidx.paging.PagingDataAdapter
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
@@ -25,8 +26,11 @@ class ListFungusAdapter : ListAdapter<DataItem, ListFungusAdapter.MyViewHolder>(
 
     override fun onBindViewHolder(holder: MyViewHolder, position: Int) {
         val user = getItem(position)
-        holder.bind(user)
+        if (user != null) {
+            holder.bind(user)
+        }
     }
+
 
 
     class MyViewHolder(private val binding: ItemListBinding) :

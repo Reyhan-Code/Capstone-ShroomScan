@@ -18,7 +18,7 @@ import com.dicoding.capstone.adapter.RecipeAdapter
 import com.dicoding.capstone.databinding.ActivityRecipeBinding
 import com.dicoding.capstone.factory.ViewModelFactory
 import com.dicoding.capstone.remote.database.FungusDb
-import com.dicoding.capstone.remote.database.FungusEntity
+import com.dicoding.capstone.remote.database.recipe.RecipeEntity
 import com.dicoding.capstone.remote.response.ResepResponse
 import com.google.gson.Gson
 import com.google.gson.JsonParser
@@ -39,12 +39,6 @@ class RecipeActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityRecipeBinding.inflate(layoutInflater)
         setContentView(binding.root)
-
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
-            val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
-            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
-            insets
-        }
 
         initAdapter()
         initSearchBar()
@@ -133,15 +127,15 @@ class RecipeActivity : AppCompatActivity() {
         return Gson().fromJson(listRecipeJson, type)
     }
 
-    private fun getAllRecipe(): LiveData<Result<List<FungusEntity>>> = liveData {
+    private fun getAllRecipe(): LiveData<Result<List<RecipeEntity>>> = liveData {
         emit(Result.Loading)
-        val fungusDao = FungusDb.getInstance(this@RecipeActivity).fungusDao()
+        val recipeDao = FungusDb.getInstance(this@RecipeActivity).recipeDao()
         try {
             val recipe = loadRecipeFromJson()
             Log.d("Recipe", "Loaded recipes: $recipe")
             val recipeList = recipe.map {
-                val isFavorited = fungusDao.isFavorite(it.id)
-                FungusEntity(
+                val isFavorited = recipeDao.isFavorite(it.id)
+                RecipeEntity(
                     it.id,
                     it.name_recipe,
                     it.ingredients.toString(),
@@ -152,13 +146,13 @@ class RecipeActivity : AppCompatActivity() {
                     isFavorited
                 )
             }
-            fungusDao.deleteAll()
-            fungusDao.insert(recipeList)
+            recipeDao.deleteAll()
+            recipeDao.insert(recipeList)
         } catch (e: Exception) {
             emit(Result.Error(e.message.toString()))
         }
-        val localData: LiveData<Result<List<FungusEntity>>> =
-            fungusDao.getRecipe().map { Result.Success(it) }
+        val localData: LiveData<Result<List<RecipeEntity>>> =
+            recipeDao.getRecipe().map { Result.Success(it) }
         emitSource(localData)
     }
 

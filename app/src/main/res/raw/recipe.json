@@ -1,94 +1,257 @@
 {
-    "listJamurRecipe": [
-      {
-        "id": "1",
-        "name_recipe": "Jamur tiram pedas",
-        "ingredients": ["500 gram jamur tiram putih", "5 buah bawang merah"," 3 buah bawang putih", "10 buah cabe rawit merah (boleh di skip jika tidak suka pedas)", "2 sdm kecap manis"," 1 sdm gula pasir","2 sdm kaldu bubuk"],
-        "howToMake": ["Pertama cuci bersih jamur nya lalu sisih kan.", "siap kan bawang2an dan cabe2an dihalus kan lalu sisihkan.", "Panas kan sedikit minyak lalu tumis bumbu halus tadi hingga harum.", "kemudian masukan gula merah td sampai gula nya larut.", "Setelah semua bumbu menyatu dan harum masukan jamur tiram berikan kaldu bubuk dan gula pasir juga kecap manis aduk hingga rata.", "oh ya disini jamur tiram akan mengeluarkan air ya masak hingga jamur layu jd masak sampai airnya agak berkurang.", "Jangan lupa tes rasa jika ada yg kurang pas boleh di tambah sesuai selera bunda ya...setelah jamur matang dan layu angkat dan sajikan.", "Selamat mencoba ya bunda"],
-        "time":"10 menit",
-        "portion":"1 porsi",
-        "photoUrl": "https://static.promediateknologi.id/crop/43x332:1035x935/750x500/webp/photo/p1/587/2023/12/20/WhatsApp-Image-2023-12-20-at-092810-2221171354.jpeg"
-      },
-      {
-        "id": "2",
-        "name_recipe": "Tumis Jamur Tiram",
-        "ingredients": ["500 gram jamur tiram putih", "5 buah bawang merah"," 3 buah bawang putih", "10 buah cabe rawit merah (boleh di skip jika tidak suka pedas)", "2 sdm kecap manis"," 1 sdm gula pasir","2 sdm kaldu bubuk"],
-        "howToMake":["Pertama cuci bersih jamur nya lalu sisih kan.", "siap kan bawang2an dan cabe2an dihalus kan lalu sisihkan.", "Panas kan sedikit minyak lalu tumis bumbu halus tadi hingga harum.", "kemudian masukan gula merah td sampai gula nya larut.", "Setelah semua bumbu menyatu dan harum masukan jamur tiram berikan kaldu bubuk dan gula pasir juga kecap manis aduk hingga rata.", "oh ya disini jamur tiram akan mengeluarkan air ya masak hingga jamur layu jd masak sampai airnya agak berkurang.", "Jangan lupa tes rasa jika ada yg kurang pas boleh di tambah sesuai selera bunda ya...setelah jamur matang dan layu angkat dan sajikan.", "Selamat mencoba ya bunda"],
-        "time":"10 menit",
-        "portion":" porsi",
-        "photoUrl": "https://media.suara.com/pictures/970x544/2022/08/22/82162-tumis-jamur-tiram.jpg"
-      },
-      {
-        "id": "3",
-        "name_recipe": "Tumis Jamur Kuping",
-        "ingredients": ["500 gram jamur tiram putih", "5 buah bawang merah"," 3 buah bawang putih", "10 buah cabe rawit merah (boleh di skip jika tidak suka pedas)", "2 sdm kecap manis"," 1 sdm gula pasir","2 sdm kaldu bubuk"],
-        "howToMake":["Pertama cuci bersih jamur nya lalu sisih kan.", "siap kan bawang2an dan cabe2an dihalus kan lalu sisihkan.", "Panas kan sedikit minyak lalu tumis bumbu halus tadi hingga harum.", "kemudian masukan gula merah td sampai gula nya larut.", "Setelah semua bumbu menyatu dan harum masukan jamur tiram berikan kaldu bubuk dan gula pasir juga kecap manis aduk hingga rata.", "oh ya disini jamur tiram akan mengeluarkan air ya masak hingga jamur layu jd masak sampai airnya agak berkurang.", "Jangan lupa tes rasa jika ada yg kurang pas boleh di tambah sesuai selera bunda ya...setelah jamur matang dan layu angkat dan sajikan.", "Selamat mencoba ya bunda"],
-        "time":"10 menit",
-        "portion":"4 porsi",
-        "photoUrl": "https://cdn0-production-images-kly.akamaized.net/LJgRGCFArq2uYrc7MC_hcuhU550=/469x260/smart/filters:quality(75):strip_icc():format(webp)/kly-media-production/medias/3056638/original/069108800_1582259814-shutterstock_1314465803.jpg"
-      },
-      {
-        "id": "4",
-        "name_recipe": "Tumis Jamur Barat",
-        "ingredients": ["500 gram jamur tiram putih", "5 buah bawang merah"," 3 buah bawang putih", "10 buah cabe rawit merah (boleh di skip jika tidak suka pedas)", "2 sdm kecap manis"," 1 sdm gula pasir","2 sdm kaldu bubuk"],
-        "howToMake":["Pertama cuci bersih jamur nya lalu sisih kan.", "siap kan bawang2an dan cabe2an dihalus kan lalu sisihkan.", "Panas kan sedikit minyak lalu tumis bumbu halus tadi hingga harum.", "kemudian masukan gula merah td sampai gula nya larut.", "Setelah semua bumbu menyatu dan harum masukan jamur tiram berikan kaldu bubuk dan gula pasir juga kecap manis aduk hingga rata.", "oh ya disini jamur tiram akan mengeluarkan air ya masak hingga jamur layu jd masak sampai airnya agak berkurang.", "Jangan lupa tes rasa jika ada yg kurang pas boleh di tambah sesuai selera bunda ya...setelah jamur matang dan layu angkat dan sajikan.", "Selamat mencoba ya bunda"],
-        "time":"10 menit",
-        "portion":"4 porsi",
-        "photoUrl": "https://img-global.cpcdn.com/recipes/9b2c74098985d9f3/680x482cq70/tumis-jamur-barat-foto-resep-utama.jpg"
-      },
-      {
-        "id": "5",
-        "name_recipe": " Jamur Tiram Crispy",
-        "ingredients": ["500 gram jamur tiram putih", "5 buah bawang merah"," 3 buah bawang putih", "10 buah cabe rawit merah (boleh di skip jika tidak suka pedas)", "2 sdm kecap manis"," 1 sdm gula pasir","2 sdm kaldu bubuk"],
-        "howToMake":["Pertama cuci bersih jamur nya lalu sisih kan.", "siap kan bawang2an dan cabe2an dihalus kan lalu sisihkan.", "Panas kan sedikit minyak lalu tumis bumbu halus tadi hingga harum.", "kemudian masukan gula merah td sampai gula nya larut.", "Setelah semua bumbu menyatu dan harum masukan jamur tiram berikan kaldu bubuk dan gula pasir juga kecap manis aduk hingga rata.", "oh ya disini jamur tiram akan mengeluarkan air ya masak hingga jamur layu jd masak sampai airnya agak berkurang.", "Jangan lupa tes rasa jika ada yg kurang pas boleh di tambah sesuai selera bunda ya...setelah jamur matang dan layu angkat dan sajikan.", "Selamat mencoba ya bunda"],
-        "time":"10 menit",
-        "portion":"4 porsi",
-        "photoUrl": "https://img-global.cpcdn.com/recipes/b38fe9a8583e1547/680x482cq70/jamur-tiram-crispy-foto-resep-utama.jpg"
-      },
-      {
-        "id": "6",
-        "name_recipe": "Tumis Jamur Onoki",
-        "ingredients": ["500 gram jamur tiram putih", "5 buah bawang merah"," 3 buah bawang putih", "10 buah cabe rawit merah (boleh di skip jika tidak suka pedas)", "2 sdm kecap manis"," 1 sdm gula pasir","2 sdm kaldu bubuk"],
-        "howToMake":["Pertama cuci bersih jamur nya lalu sisih kan.", "siap kan bawang2an dan cabe2an dihalus kan lalu sisihkan.", "Panas kan sedikit minyak lalu tumis bumbu halus tadi hingga harum.", "kemudian masukan gula merah td sampai gula nya larut.", "Setelah semua bumbu menyatu dan harum masukan jamur tiram berikan kaldu bubuk dan gula pasir juga kecap manis aduk hingga rata.", "oh ya disini jamur tiram akan mengeluarkan air ya masak hingga jamur layu jd masak sampai airnya agak berkurang.", "Jangan lupa tes rasa jika ada yg kurang pas boleh di tambah sesuai selera bunda ya...setelah jamur matang dan layu angkat dan sajikan.", "Selamat mencoba ya bunda"],
-        "time":"10 menit",
-        "portion":"4 porsi",
-        "photoUrl": "https://img-global.cpcdn.com/recipes/2c5ecf8b1bddc634/680x482cq70/tumis-jamur-shimeji-kwetiau-foto-resep-utama.jpg"
-      },
-      {
-        "id": "7",
-        "name_recipe": "Lumpia Ayam Jamur Tiram",
-        "ingredients": ["500 gram jamur tiram putih", "5 buah bawang merah"," 3 buah bawang putih", "10 buah cabe rawit merah (boleh di skip jika tidak suka pedas)", "2 sdm kecap manis"," 1 sdm gula pasir","2 sdm kaldu bubuk"],
-        "howToMake":["Pertama cuci bersih jamur nya lalu sisih kan.", "siap kan bawang2an dan cabe2an dihalus kan lalu sisihkan.", "Panas kan sedikit minyak lalu tumis bumbu halus tadi hingga harum.", "kemudian masukan gula merah td sampai gula nya larut.", "Setelah semua bumbu menyatu dan harum masukan jamur tiram berikan kaldu bubuk dan gula pasir juga kecap manis aduk hingga rata.", "oh ya disini jamur tiram akan mengeluarkan air ya masak hingga jamur layu jd masak sampai airnya agak berkurang.", "Jangan lupa tes rasa jika ada yg kurang pas boleh di tambah sesuai selera bunda ya...setelah jamur matang dan layu angkat dan sajikan.", "Selamat mencoba ya bunda"],
-        "time":"10 menit",
-        "portion":"4 porsi",
-        "photoUrl": "https://img-global.cpcdn.com/recipes/8bb5a3dd811833df/680x482cq70/lumpia-ayam-jamur-tiram-foto-resep-utama.webp"
-      },
-      {
-        "id": "8",
-        "name_recipe": "Miso Tofu Shiitake",
-        "ingredients": ["500 gram jamur tiram putih", "5 buah bawang merah"," 3 buah bawang putih", "10 buah cabe rawit merah (boleh di skip jika tidak suka pedas)", "2 sdm kecap manis"," 1 sdm gula pasir","2 sdm kaldu bubuk"],
-        "howToMake":["Pertama cuci bersih jamur nya lalu sisih kan.", "siap kan bawang2an dan cabe2an dihalus kan lalu sisihkan.", "Panas kan sedikit minyak lalu tumis bumbu halus tadi hingga harum.", "kemudian masukan gula merah td sampai gula nya larut.", "Setelah semua bumbu menyatu dan harum masukan jamur tiram berikan kaldu bubuk dan gula pasir juga kecap manis aduk hingga rata.", "oh ya disini jamur tiram akan mengeluarkan air ya masak hingga jamur layu jd masak sampai airnya agak berkurang.", "Jangan lupa tes rasa jika ada yg kurang pas boleh di tambah sesuai selera bunda ya...setelah jamur matang dan layu angkat dan sajikan.", "Selamat mencoba ya bunda"],
-        "time":"10 menit",
-        "portion":"5 porsi",
-        "photoUrl": "https://img-global.cpcdn.com/recipes/e451c3613825035d/680x482cq70/474-miso-tofu-shiitake-foto-resep-utama.webp"
-      },
-      {
-        "id": "9",
-        "name_recipe": "Sate Jamur & saus kacang",
-        "ingredients": ["500 gram jamur tiram putih", "5 buah bawang merah"," 3 buah bawang putih", "10 buah cabe rawit merah (boleh di skip jika tidak suka pedas)", "2 sdm kecap manis"," 1 sdm gula pasir","2 sdm kaldu bubuk"],
-        "howToMake":["Pertama cuci bersih jamur nya lalu sisih kan.", "siap kan bawang2an dan cabe2an dihalus kan lalu sisihkan.", "Panas kan sedikit minyak lalu tumis bumbu halus tadi hingga harum.", "kemudian masukan gula merah td sampai gula nya larut.", "Setelah semua bumbu menyatu dan harum masukan jamur tiram berikan kaldu bubuk dan gula pasir juga kecap manis aduk hingga rata.", "oh ya disini jamur tiram akan mengeluarkan air ya masak hingga jamur layu jd masak sampai airnya agak berkurang.", "Jangan lupa tes rasa jika ada yg kurang pas boleh di tambah sesuai selera bunda ya...setelah jamur matang dan layu angkat dan sajikan.", "Selamat mencoba ya bunda"],
-        "time":"10 menit",
-        "portion":"4 porsi",
-        "photoUrl": "https://img-global.cpcdn.com/recipes/03d4d167e493c0ab/680x482cq70/sate-jamur-saus-kacang-foto-resep-utama.webp"
-      },
-      {
-        "id": "10",
-        "name_recipe": "Sate Jamur Tiram",
-        "ingredients": ["500 gram jamur tiram putih", "5 buah bawang merah"," 3 buah bawang putih", "10 buah cabe rawit merah (boleh di skip jika tidak suka pedas)", "2 sdm kecap manis"," 1 sdm gula pasir","2 sdm kaldu bubuk"],
-        "howToMake":["Pertama cuci bersih jamur nya lalu sisih kan.", "siap kan bawang2an dan cabe2an dihalus kan lalu sisihkan.", "Panas kan sedikit minyak lalu tumis bumbu halus tadi hingga harum.", "kemudian masukan gula merah td sampai gula nya larut.", "Setelah semua bumbu menyatu dan harum masukan jamur tiram berikan kaldu bubuk dan gula pasir juga kecap manis aduk hingga rata.", "oh ya disini jamur tiram akan mengeluarkan air ya masak hingga jamur layu jd masak sampai airnya agak berkurang.", "Jangan lupa tes rasa jika ada yg kurang pas boleh di tambah sesuai selera bunda ya...setelah jamur matang dan layu angkat dan sajikan.", "Selamat mencoba ya bunda"],
-        "time":"10 menit",
-        "portion":"2 porsi",
-        "photoUrl": "https://img-global.cpcdn.com/recipes/ab968f924649cb07/680x482cq70/sate-jamur-tiram-foto-resep-utama.webp"
-      }
-    ]
-  }
+  "listJamurRecipe": [
+    {
+      "id": "1",
+      "name_recipe": "Jamur tiram pedas",
+      "ingredients": [
+        "500 gram jamur tiram putih",
+        "5 buah bawang merah",
+        "3 buah bawang putih",
+        "10 buah cabe rawit merah (boleh di skip jika tidak suka pedas)",
+        "2 sdm kecap manis",
+        "1 sdm gula pasir",
+        "2 sdm kaldu bubuk"
+      ],
+      "howToMake": [
+        "Pertama cuci bersih jamur nya lalu sisih kan.",
+        "siap kan bawang2an dan cabe2an dihalus kan lalu sisihkan.",
+        "Panas kan sedikit minyak lalu tumis bumbu halus tadi hingga harum.",
+        "kemudian masukan gula merah td sampai gula nya larut.",
+        "Setelah semua bumbu menyatu dan harum masukan jamur tiram berikan kaldu bubuk dan gula pasir juga kecap manis aduk hingga rata.",
+        "oh ya disini jamur tiram akan mengeluarkan air ya masak hingga jamur layu jd masak sampai airnya agak berkurang.",
+        "Jangan lupa tes rasa jika ada yg kurang pas boleh di tambah sesuai selera bunda ya...setelah jamur matang dan layu angkat dan sajikan.",
+        "Selamat mencoba ya bunda"
+      ],
+      "time": "10 menit",
+      "portion": "1 porsi",
+      "photoUrl": "https://static.promediateknologi.id/crop/43x332:1035x935/750x500/webp/photo/p1/587/2023/12/20/WhatsApp-Image-2023-12-20-at-092810-2221171354.jpeg"
+    },
+    {
+      "id": "2",
+      "name_recipe": "Tumis Jamur Tiram",
+      "ingredients": [
+        "300 gram jamur tiram",
+        "6 buah tahu (potong dadu dan goreng)",
+        "6 lembar kubis (iris tipis)",
+        "1 batang Daun bawang (iris serong)",
+        "3 siung bawang merah (iris tipis)",
+        "3 siung bawang putih (iris tipis)",
+        "3 buah cabe keriting (iris tipis)",
+        "3 buah cengek(iris tipis)",
+        "1 sdm kecap ikan",
+        "2 sdm saos tiram",
+        "Secukupnya garam",
+        "1 sdt Gula",
+        "1 sdt masako",
+        "1 sdt lada bubuk",
+        "1 gelas air"
+      ],
+      "howToMake": [
+        "1. Suwir jamur tiram dan cuci bersih. Rendam jamur tiram dengan air panas kurang lebih 3 menit. Kemudian tiriskan",
+        "2. Tumis bawang merah, bawang putih, cabe keriting, cengek. Setelah wangi masukkan jamur tiram, daun bawang, tahu dan kubis. Aduk rata",
+        "3. Masukkan kecap ikan, saos tiram, lada, garam, gula dan masako. Tambahkan 1 gelas air. Aduh rata dan tunggu hingga matang",
+        "4. Tumis jamur tiram siap disajikan"
+      ],
+      "time": "10 menit",
+      "portion": " 4 porsi",
+      "photoUrl": "https://img-global.cpcdn.com/recipes/8334b70136eceba0/640x640sq70/photo.webp"
+    },
+    {
+      "id": "3",
+      "name_recipe": "Tumis duo jamur (jamur tiram dan jamur kuping)",
+      "ingredients": [
+        "1/2 kg jamur tiram, sobek2",
+        "1/4 kg jamur kuping, potong2",
+        "5 buah bawang merah, iris tipis",
+        "3 siung bawang putih, iris tipis",
+        "2 lembar daun salam",
+        "1 ruas jari lengkuas, memarkan",
+        "3 buah cabe merah besar, iris miring",
+        "3 buah cabe ijo besar, iris miring",
+        "1 SDM saos tiram",
+        "secukupnya Garam, gula, lada bubuk, kaldu jamur"
+      ],
+      "howToMake": [
+        "1. Tumis bawang merah dan putih hingga harum, masukkan lengkuas dan daun salam, masukkan cabe",
+        "2. Masukkan jamur tiram dan jamur kuping, aduk rata",
+        "3. Tambahkan saos tiram, garam, gula, kaldu bubuk, aduk rata, koreksi rasa, angkat dan sajikan"
+      ],
+      "time": "25 menit",
+      "portion": "2 orang",
+      "photoUrl": "https://img-global.cpcdn.com/recipes/4954273ceb87f9f2/640x640sq70/photo.webp"
+    },
+    {
+      "id": "4",
+      "name_recipe": "Oseng Mercon Jamur Tiram & Kemangi",
+      "ingredients": [
+        "200 gr jamur tiram",
+      "Secukupnya daun kemangi",
+      "3 bawang merah iris tipis",
+      "2 bawang putih iris tipis",
+      "7 cabe rawit potong serong",
+      "1/2 sdm kecap manis",
+      "secukupnya Gula dan garam",
+      "1 sdm Minyak goreng untuk menumis"
+      ],
+      "howToMake": [
+      "1. Suwir2 jamur tiram, cuci bersih. Peras hingga kering. Sisihkan",
+      "2. Siapkan bumbu2. Kemudian tumis duo bawang serta cabe hingga harum, lanjut masukkan jamur tiram. Dan masukkan kecap serta gula dan garam.",
+      "3. Aduk2 sebentar, tes rasa. Jika rasa sdh pas, matikan api kompor, masukkan daun kemangi, aduk2. Tata di piring, sajikan"
+      ],
+      "time": "10 menit",
+      "portion": "1 orang",
+      "photoUrl": "https://img-global.cpcdn.com/recipes/33663925834b1e83/640x640sq70/photo.webp"
+    },
+    {
+      "id": "5",
+      "name_recipe": "Jamur tiram kuah pedas",
+      "ingredients": [
+        "1 bungkus jamur tiram",
+        "1 buah wortel (potong korek api)",
+        "2 buah cabe merah (potong serong)",
+        "1 buah tomat",
+        "1 batang daun bawang",
+        "1 batang seledri",
+        "2 siung bawang merah dan putih",
+        "3 buah cabe merah",
+        "Secukupnya kaldu bubuk, garam, ketumbar bubuk"
+      ],
+      "howToMake": [
+        "1. Bersihkan jamur tiram dan potong2 wortel. Potong2 semua bahan tambahan",
+        "dan haluskan semua bumbu halus",
+        "2. Tumis bawang merah dan bawang putih hingga wangi, masukkan bumbu halus, aduk sampai tidak langu",
+        "3. Masukkan wortel dan jamur tiramnya, aduk sampai layu, tambahkan cabe merah, rawit, daun bawang, seledri,dan tomat aduk rata",
+        "4. Tambahkan kaldu bubuk, garam dan ketumbar bubuk secukupnya, koreksi rasa",
+        "5. Jamur tiram kuah pedas siap disantap selagi hangat"
+      ],
+      "time": "30 menit",
+      "portion": "3 orang",
+      "photoUrl": "https://img-global.cpcdn.com/recipes/f9770c2131654d92/640x640sq70/photo.webp"
+    },
+    {
+      "id": "6",
+      "name_recipe": "Tumis Jamur Kuping Ala Taiwan",
+      "ingredients": [
+        "150 gr Jamur Kuping",
+        "20 gr Udang Ebi (Rendam Air Panas) - Buang airnya",
+        "1/2 Potong Wortel (Iris)",
+        "2 Batang Daun Bawang (Iris)",
+        "5 cm Jahe (Iris Korek)",
+        "2 Siung Bawang Putih (Cincang)",
+        "100 ml Air",
+        "Secukupnya Minyak Goreng",
+        "2 sdm Kecap Asin",
+        "1 sdm Saus Tiram",
+        "1 sdt Kaldu Jamur",
+        "1/4 sdt Lada Bubuk",
+        "Secukupnya Garam"
+      ],
+      "howToMake": [
+        "1. Siapkan bahan yang diperlukan. Lalu potong jamur kuping secara memanjang. Sisihkan",
+        "2. Goreng ebi sampai sampai harum. Lalu masukan bawang putih dan jahe. Aduk sampai ebi berwarna kecoklatan",
+        "3. Masukan wortel, jamur kuping dan air. Aduk² lalu tambahkan bumbu perasa. Aduk kembali. Dan biarkan sampai bumbu meresap",
+        "4. Cicipi rasa. Matang, lalu masukan daun bawang. Aduk sebentar.",
+        "Angkat dan siap disajikan"
+      ],
+      "time": "30 menit",
+      "portion": "3 orang",
+      "photoUrl": "https://img-global.cpcdn.com/recipes/790074ecf7154d58/680x482cq70/tumis-jamur-kuping-ala-taiwan-foto-resep-utama.webp"
+    },
+    {
+      "id": "7",
+      "name_recipe": "Tumis Jamur Kuping Ala Taiwan",
+      "ingredients": [
+        "100 gr jamur kuping",
+        "2 sdm ebi, rendam air panas, tiriskan lalu cincang",
+        "1/2 potong wortel, iris korek api",
+        "5 cm jahe, iris",
+        "2 batang daun bawang, skip",
+        "2 siung bawang putih, geprek dan cincang",
+        "100 ml air",
+        "Secukupnya minyak untuk menumis",
+        "2 sdm kecap asin",
+        "1 sdm saus tiram",
+        "1 sdt kaldu jamur",
+        "1/4 sdt lada bubuk",
+        "Secukupnya garam"
+      ],
+      "howToMake": [
+        "1. Rendam ebi dengan air panas, tiriskan lalu cincang. Iris wortel dan juga jamur kuping yanh sudah dibersihkan",
+        "2. Iris jahe dan bawang putih. Tumis ebi lalu bawang putih dan jahe hingga wangi. Beri air masukkan wortel dan irisan jamur kuping",
+        "3. Tambahkan bumbu perasa, aduk rata lalu sajikan"
+      ],
+      "time": "25 menit",
+      "portion": "4 orang",
+      "photoUrl": "https://img-global.cpcdn.com/recipes/501dccb70a2d7708/680x482cq70/tumis-jamur-kuping-ala-taiwan-foto-resep-utama.webp"
+    },
+    {
+      "id": "8",
+      "name_recipe": "Cap Cay Jamur Kuping",
+      "ingredients": [
+        "2 buah Wortel Import",
+        "4 lembar Jamur Kuping",
+        "5 butir Bakso Sapi",
+        "1/2 Bawang Bombay, iris tipis",
+        "2 siung Bawang Putih, iris tipis",
+        "2 sdm Saus Tiram",
+        "1 sdt Kaldu jamur",
+        "1/2 sdt Lada Bubuk",
+        "200 ml Air",
+        "3 sdm Minyak untuk menumis"
+      ],
+      "howToMake": [
+        "1. Siapkan jamur kuping dan sayuran lainnya",
+        "2. Panaskan minyak, tumis bawang putih dan bombay hingga harum kemudian masukkan bakso",
+        "3. Lanjut masukkan air tunggu hingga mendidih, masukkan wortel, kembang kol, jamur kuping, saus tiram, kaldu bubuk, lada bubuk. Masak hingga sayuran matang"
+      ],
+      "time": "35 menit",
+      "portion": "3-4 orang",
+      "photoUrl":  "https://img-global.cpcdn.com/recipes/d217b57db7271f35/680x482cq70/cap-cay-jamur-kuping-foto-resep-utama.webp"
+    },
+    {
+      "id": "9",
+      "name_recipe": "Enoki Saus Korea",
+      "ingredients": [
+        "1 bungkus enoki",
+        "1 siung bawang putih",
+        "2 sdm gochujang (bisa menggunakan merk kikkoman)",
+        "1/2 sdm kecap asin",
+        "1 sdm gula pasir",
+        "1 sdm minyak goreng untuk menumis",
+        "1 sdm minyak wijen",
+        "1 sdt totole",
+        "1 sdm tepung maizena"
+      ],
+      "howToMake": [
+        "1. Cincang bawang putih (kalau saya menggunakan garlic presser) lalu tumis sebentar",
+        "2. Masukkan seluruh bahan saus",
+        "3. Tes rasa, jika sudah sesuai dengan selera masukkan jamur enoki",
+        "4. Jika enoki sudah terlihat matang, masukkan maizena yg sudah dilarutkan",
+        "5. Untuk garnish bisa ditambahi biji wijen"
+      ],
+      "time": "20 menit",
+      "portion": "1 orang",
+      "photoUrl": "https://img-global.cpcdn.com/recipes/91bea0fb9626112b/680x482cq70/enoki-saus-korea-foto-resep-utama.webp"
+    },
+    {
+      "id": "10",
+      "name_recipe": "Jamur Crispy Simple",
+      "ingredients": [
+        "250 gram jamur tiram",
+        "Secukupnya bubuk tabur mie goreng emaku",
+        "secukupnya Minyak untuk menggoreng",
+        "1 sdm garam",
+        "1/2 sdm kaldu bubuk",
+        "250 gram tepung terigu serbaguna"
+      ],
+      "howToMake": [
+        "1. Cuci bersih jamur. Tiriskan dengan kain bersih agar kandungan airnya tidak terlalu banyak. Beri bumbu tabur mie goreng emaku, aduk rata sambil diremas. Siapkan wadah dan campur jadi satu semua bahan tepung. Aduk hingga rata dan cicipi. Masukkan tiap lembaran jamur kedalam tepung. Balurkan hingga jamur tertutup tepung",
+        "2. Goreng dengan api kecil dengan minyak yang sudah dipanaskan sebelumnya hingga kuning kecoklatan. Angkat dan tiriskan",
+        "3. Sajikan dengan saus kesukaan😋"
+      ],
+      "time": "25 menit",
+      "portion": "4 orang",
+      "photoUrl": "https://img-global.cpcdn.com/recipes/7a8148347ff8aba8/680x482cq70/jamur-crispy-simple-foto-resep-utama.webp"
+    }
+  ]
+}

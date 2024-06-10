@@ -6,10 +6,11 @@ import android.os.Bundle
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
 import com.bumptech.glide.Glide
+import com.bumptech.glide.load.resource.drawable.DrawableTransitionOptions
 import com.dicoding.capstone.R
 import com.dicoding.capstone.databinding.ActivityDetailRecipeBinding
 import com.dicoding.capstone.factory.ViewModelFactory
-import com.dicoding.capstone.remote.database.FungusEntity
+import com.dicoding.capstone.remote.database.recipe.RecipeEntity
 import com.dicoding.capstone.view.recipe.RecipeActivity
 
 
@@ -28,17 +29,16 @@ class DetailRecipeActivity : AppCompatActivity() {
         setContentView(binding.root)
 
 
-        val recipe: FungusEntity? = if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
-            intent.getParcelableExtra("Recipe", FungusEntity::class.java)
+        val recipe: RecipeEntity? = if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
+            intent.getParcelableExtra("Recipe", RecipeEntity::class.java)
         } else {
             @Suppress("DEPRECATION")
             intent.getParcelableExtra("Recipe")
         }
 
-
-
         Glide.with(this)
             .load(recipe?.photoUrl)
+            .transition(DrawableTransitionOptions.withCrossFade())
             .into(binding.tvDetailRecipeImage)
 
         binding.detailNameRecipe.text = recipe?.name_recipe
@@ -49,7 +49,6 @@ class DetailRecipeActivity : AppCompatActivity() {
 
         binding.btnLeft.setOnClickListener {
             Intent(this, RecipeActivity::class.java).also {
-                startActivity(it)
                 finish()
             }
         }
@@ -60,7 +59,7 @@ class DetailRecipeActivity : AppCompatActivity() {
                 viewModel.deleteRecipe(recipe)
                 binding.btnFav.setImageResource(R.drawable.heart_fav)
             } else {
-                viewModel.saveRecipe(recipe as FungusEntity)
+                viewModel.saveRecipe(recipe as RecipeEntity)
                 binding.btnFav.setImageResource(R.drawable.heart)
             }
         }

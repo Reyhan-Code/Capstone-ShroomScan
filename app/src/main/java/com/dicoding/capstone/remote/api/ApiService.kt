@@ -1,10 +1,14 @@
 package com.dicoding.capstone.remote.api
 
+import com.dicoding.capstone.remote.database.fungus.FungusEntity
+import com.dicoding.capstone.remote.response.DataItem
 import com.dicoding.capstone.remote.response.DetailResponse
 import com.dicoding.capstone.remote.response.FungusResponse
 import com.dicoding.capstone.remote.response.GithubResponse
 import com.dicoding.capstone.remote.response.ItemsItem
+import com.dicoding.capstone.remote.response.ResepResponse
 import retrofit2.Call
+import retrofit2.Response
 import retrofit2.http.GET
 import retrofit2.http.Path
 import retrofit2.http.Query
@@ -14,12 +18,14 @@ interface ApiService {
     fun getFungus(
     ): Call<FungusResponse>
 
-    @GET("users/{username}")
-    fun getDetailUser(@Path("username") username: String): Call<DetailResponse>
+    @GET("mushrooms/{id}")
+    fun getDetailFungus(@Path("id") id: Int): Call<FungusResponse>
 
-    @GET("users/{username}/followers")
-    fun getFollowers(@Path("username") username: String): Call<List<ItemsItem>>
+    @GET("mushrooms")
+    suspend fun getFungusData(
+        @Query("page") page: Int,
+        @Query("size") size: Int
+    ): List<FungusEntity>
 
-    @GET("users/{username}/following")
-    fun getFollowing(@Path("username") username: String): Call<List<ItemsItem>>
+
 }

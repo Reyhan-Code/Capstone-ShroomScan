@@ -4,7 +4,11 @@ import android.util.Log
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
+import androidx.lifecycle.viewModelScope
+import androidx.paging.PagingData
+import androidx.paging.cachedIn
 import com.dicoding.capstone.remote.api.ApiConfig
+import com.dicoding.capstone.remote.database.fungus.FungusEntity
 import com.dicoding.capstone.remote.response.DataItem
 import com.dicoding.capstone.remote.response.FungusResponse
 import com.dicoding.capstone.repository.FungusRepository
@@ -14,12 +18,12 @@ import retrofit2.Response
 
 class MainViewModel(repository: FungusRepository) : ViewModel() {
 
+
     private val _userData = MutableLiveData<List<DataItem>?>()
     val userData: LiveData<List<DataItem>?> = _userData
 
     private val _loading = MutableLiveData<Boolean>()
     val isLoading: LiveData<Boolean> = _loading
-
 
     init {
         findFungus()
@@ -55,3 +59,4 @@ class MainViewModel(repository: FungusRepository) : ViewModel() {
     }
 
 }
+

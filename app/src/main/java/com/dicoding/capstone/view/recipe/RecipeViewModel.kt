@@ -5,7 +5,7 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.liveData
 import androidx.lifecycle.map
 import androidx.lifecycle.viewModelScope
-import com.dicoding.capstone.remote.database.FungusEntity
+import com.dicoding.capstone.remote.database.recipe.RecipeEntity
 import com.dicoding.capstone.repository.FungusRepository
 import kotlinx.coroutines.launch
 import com.dicoding.capstone.data.Result
@@ -13,19 +13,19 @@ import com.dicoding.capstone.data.Result
 class RecipeViewModel(private val repository: FungusRepository) : ViewModel() {
 
 
-    fun saveRecipe(recipe: FungusEntity) {
+    fun saveRecipe(recipe: RecipeEntity) {
         viewModelScope.launch {
             repository.setFavoriteRecipe(recipe, true)
         }
     }
 
-    fun deleteCulinary(recipe: FungusEntity) {
+    fun deleteCulinary(recipe: RecipeEntity) {
         viewModelScope.launch {
             repository.setFavoriteRecipe(recipe, false)
         }
     }
 
-    fun searchRecipe(query: String): LiveData<Result<List<FungusEntity>>> = liveData {
+    fun searchRecipe(query: String): LiveData<Result<List<RecipeEntity>>> = liveData {
         emit(Result.Loading)
         try {
             val searchResult = repository.searchRecipe(query)

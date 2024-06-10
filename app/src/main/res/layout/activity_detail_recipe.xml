@@ -55,36 +55,45 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
-            <LinearLayout
+            <FrameLayout
                 android:id="@+id/frameLayout"
                 android:layout_width="match_parent"
-                android:orientation="vertical"
-                android:layout_height="match_parent">
+                android:layout_height="200dp">
 
-                <de.hdodenhof.circleimageview.CircleImageView
+                <ImageView
                     android:id="@+id/tv_detail_recipe_image"
-                    android:layout_width="170dp"
-                    android:layout_height="170dp"
-                    android:layout_gravity="center"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
                     android:scaleType="centerCrop"
-                    android:layout_marginTop="10dp"
-                    app:civ_border_width="4dp"
-                    app:civ_border_color="@color/white"
-                    android:src="@drawable/tumis_jamur" />
+                    android:contentDescription="@string/recipe_info"
+                    android:src="@drawable/tiram" />
 
-                <TextView
-                    android:id="@+id/detail_name_recipe"
-                    android:layout_width="wrap_content"
+                <View
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp"
+                    android:background="@drawable/black_shape" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
                     android:background="@android:color/transparent"
-                    android:fontFamily="@font/inter_bold"
-                    android:padding="7dp"
-                    android:layout_gravity="center"
-                    android:textColor="@color/black"
-                    android:textSize="20sp"
-                    android:text="@string/name_fungus" />
-            </LinearLayout>
+                    android:orientation="vertical"
+                    android:padding="8dp">
+
+                    <TextView
+                        android:id="@+id/detail_name_recipe"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:background="@android:color/transparent"
+                        android:fontFamily="@font/inter_bold"
+                        android:padding="7dp"
+                        android:textColor="@color/white"
+                        android:textSize="20sp"
+                        android:text="@string/name_fungus" />
+                </LinearLayout>
+            </FrameLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -152,7 +161,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="10dp"
-                    android:text="@string/detail_bahan"
+                   tools:text="@string/detail_bahan"
                     android:textColor="@color/black"
                     android:fontFamily="@font/inter_medium"
                     android:textSize="15sp" />
@@ -186,7 +195,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="10dp"
                     android:fontFamily="@font/inter_medium"
-                    android:text="@string/detail_recipe"
+                    tools:text="@string/detail_recipe"
                     android:textColor="@color/black"
                     android:textSize="15sp" />
             </LinearLayout>

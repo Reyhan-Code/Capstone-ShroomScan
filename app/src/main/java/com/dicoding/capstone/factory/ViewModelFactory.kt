@@ -7,7 +7,6 @@ import com.dicoding.capstone.di.Injection
 import com.dicoding.capstone.repository.FungusRepository
 import com.dicoding.capstone.view.favorit.FavoriteViewModel
 import com.dicoding.capstone.view.main.MainViewModel
-import com.dicoding.capstone.view.recipe.RecipeActivity
 import com.dicoding.capstone.view.recipe.RecipeViewModel
 import com.dicoding.capstone.view.recipe.detail.DetailRecipeViewModel
 

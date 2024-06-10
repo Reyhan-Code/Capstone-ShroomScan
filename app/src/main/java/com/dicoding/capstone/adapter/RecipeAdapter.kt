@@ -2,7 +2,6 @@ package com.dicoding.capstone.adapter
 
 import android.annotation.SuppressLint
 import android.content.Intent
-import android.os.Bundle
 import android.util.Log
 import android.view.LayoutInflater
 import android.view.ViewGroup
@@ -11,18 +10,13 @@ import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
-import com.bumptech.glide.load.resource.drawable.DrawableTransitionOptions
 import com.dicoding.capstone.R
-import com.dicoding.capstone.adapter.ListFungusAdapter.Companion.DIFF_CALLBACK
-import com.dicoding.capstone.databinding.ItemListBinding
 import com.dicoding.capstone.databinding.RecipeListBinding
-import com.dicoding.capstone.remote.database.FungusEntity
-import com.dicoding.capstone.remote.response.DataItem
-import com.dicoding.capstone.view.detail.DetailFungusActivity
+import com.dicoding.capstone.remote.database.recipe.RecipeEntity
 import com.dicoding.capstone.view.recipe.detail.DetailRecipeActivity
 
-class RecipeAdapter(private val onFavoriteClick: (FungusEntity) -> Unit) :
-    ListAdapter<FungusEntity, RecipeAdapter.MyViewHolder>(DIFF_CALLBACK) {
+class RecipeAdapter(private val onFavoriteClick: (RecipeEntity) -> Unit) :
+    ListAdapter<RecipeEntity, RecipeAdapter.MyViewHolder>(DIFF_CALLBACK) {
 
 
 
@@ -57,7 +51,7 @@ class RecipeAdapter(private val onFavoriteClick: (FungusEntity) -> Unit) :
     }
 
     class MyViewHolder(val binding: RecipeListBinding) : RecyclerView.ViewHolder(binding.root) {
-        fun bind(recipe: FungusEntity) {
+        fun bind(recipe: RecipeEntity) {
             binding.nameRecipe.text = recipe.name_recipe
             binding.tvDetailRecipe.text = recipe.ingredients
 
@@ -75,14 +69,14 @@ class RecipeAdapter(private val onFavoriteClick: (FungusEntity) -> Unit) :
     }
 
     companion object {
-        val DIFF_CALLBACK: DiffUtil.ItemCallback<FungusEntity> =
-            object : DiffUtil.ItemCallback<FungusEntity>() {
-                override fun areItemsTheSame(oldItem: FungusEntity, newItem: FungusEntity): Boolean {
+        val DIFF_CALLBACK: DiffUtil.ItemCallback<RecipeEntity> =
+            object : DiffUtil.ItemCallback<RecipeEntity>() {
+                override fun areItemsTheSame(oldItem: RecipeEntity, newItem: RecipeEntity): Boolean {
                     return oldItem.id == newItem.id
                 }
 
                 @SuppressLint("DiffUtilEquals")
-                override fun areContentsTheSame(oldItem: FungusEntity, newItem: FungusEntity): Boolean {
+                override fun areContentsTheSame(oldItem: RecipeEntity, newItem: RecipeEntity): Boolean {
                     return oldItem == newItem
                 }
             }
