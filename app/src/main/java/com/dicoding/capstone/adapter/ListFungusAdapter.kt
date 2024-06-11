@@ -38,7 +38,7 @@ class ListFungusAdapter : ListAdapter<DataItem, ListFungusAdapter.MyViewHolder>(
         fun bind(user: DataItem) {
             with(binding) {
                 val arguments = Bundle()
-                arguments.putString(USERNAME_KEY, user.nama)
+                arguments.putString(ID_KEY, user.id.toString())
                 Glide.with(itemView)
                     .load(user.gambar1)
                     .transition(DrawableTransitionOptions.withCrossFade())
@@ -56,7 +56,7 @@ class ListFungusAdapter : ListAdapter<DataItem, ListFungusAdapter.MyViewHolder>(
     }
 
     companion object {
-        const val USERNAME_KEY = "username"
+        const val ID_KEY = "id"
 
         val DIFF_CALLBACK = object : DiffUtil.ItemCallback<DataItem>() {
             override fun areItemsTheSame(oldItem: DataItem, newItem: DataItem): Boolean {

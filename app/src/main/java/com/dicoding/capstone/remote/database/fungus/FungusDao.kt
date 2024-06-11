@@ -25,7 +25,8 @@ interface FungusDao {
     suspend fun delete(fungus: FungusEntity)
 
     @Query("SELECT * FROM fungus_db")
-    fun getAllFungus(): PagingSource<Int, FungusEntity>
+    fun getAllFungus(): LiveData<List<FungusEntity>>
+
 
     @Query("DELETE FROM fungus_db")
     suspend fun deleteAll()

@@ -135,6 +135,7 @@
                     app:cardCornerRadius="15dp"
                     app:cardElevation="4dp">
                     <ImageView
+                        android:id="@+id/detail_img2"
                         android:layout_width="match_parent"
                         android:layout_height="200dp"
                         android:scaleType="centerCrop"
@@ -179,4 +180,14 @@
 
         </LinearLayout>
     </ScrollView>
+    <ProgressBar
+        android:id="@+id/progres_bar"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="40dp"
+        android:layout_height="250dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@id/Linear_top"       app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -41,6 +41,8 @@ import com.dicoding.capstone.view.scan.ScanActivity
 import com.google.gson.Gson
 import com.google.gson.JsonParser
 import com.google.gson.reflect.TypeToken
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.withContext
 import java.io.InputStreamReader
 
 class MainActivity : AppCompatActivity() {
@@ -88,7 +90,7 @@ class MainActivity : AppCompatActivity() {
                     searchBar.setText(query)
                     Log.d("query", query)
                     searchView.hide()
-                    mainViewModel.findFungus()
+                    mainViewModel.findFungus(searchView.text.toString())
                     true
                 } else {
                     false
@@ -112,7 +114,7 @@ class MainActivity : AppCompatActivity() {
 
         binding.btnScan.setOnClickListener { startScanActivity() }
         binding.btnRecipe.setOnClickListener { startRecipeActivity() }
-
+//        getAllFungus()
   }
 
     private fun startScanActivity() {
@@ -134,8 +136,44 @@ class MainActivity : AppCompatActivity() {
     }
 
 
+//    private suspend fun loadFungusFromApi(): List<FungusEntity> = withContext(Dispatchers.IO) {
+//        val apiService = ApiConfig.getApiService()
+//        return@withContext apiService.getFungusData(page = 1, size = 10)
+//    }
+//
+//    private fun getAllFungus(): LiveData<Result<List<FungusEntity>>> = liveData(Dispatchers.IO) {
+//        emit(Result.Loading)
+//        val recipeDao = FungusDb.getInstance(this@MainActivity).fungusDao()
+//        try {
+//            val fungusData = loadFungusFromApi()
+//            Log.d("Fungus", "Loaded fungus data: $fungusData")
+//            val recipeList = fungusData.map {
+//                FungusEntity(
+//                    it.id,
+//                    it.nama,
+//                    it.jenis,
+//                    it.deskripsi,
+//                    it.media_tanam,
+//                    it.gambar1,
+//                    it.gambar2,
+//                    it.gambar3
+//                )
+//            }
+//
+//            Log.d("Fungus", "Converted fungus data: $recipeList")
+//            recipeDao.deleteAll()
+//            recipeDao.insert(recipeList)
+//        } catch (e: Exception) {
+//            emit(Result.Error(e.message.toString()))
+//            return@liveData
+//        }
+//        val localData: LiveData<Result<List<FungusEntity>>> =
+//            recipeDao.getAllFungus().map { Result.Success(it) }
+//        emitSource(localData)
+//    }
 
-    fun showLoading(isLoading: Boolean) {
+
+    private fun showLoading(isLoading: Boolean) {
         if (isLoading) {
             binding.progressBar.visibility = View.VISIBLE
         } else {

@@ -86,6 +86,7 @@
         android:layout_alignParentEnd="true"
         android:layout_marginTop="16dp"
         android:text="@string/explore"
+        android:textColor="@color/white"
         android:textSize="20sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"

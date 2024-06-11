@@ -14,12 +14,18 @@ import retrofit2.http.Path
 import retrofit2.http.Query
 
 interface ApiService {
-    @GET("mushrooms")
+    @GET("mushrooms/name")
     fun getFungus(
+        @Query("Jamur") query: String
     ): Call<FungusResponse>
 
     @GET("mushrooms/{id}")
-    fun getDetailFungus(@Path("id") id: Int): Call<FungusResponse>
+    fun getDetailFungus(@Path("id") id: String): Call<DataItem>
+
+    @GET("mushrooms/name/{name}")
+    fun getFungusSearch(
+        @Query("q") query: String
+    ): Call<FungusResponse>
 
     @GET("mushrooms")
     suspend fun getFungusData(
