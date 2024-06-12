@@ -1,7 +1,6 @@
 package com.dicoding.capstone.remote.api
 
 import com.dicoding.capstone.BuildConfig
-import okhttp3.Interceptor
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Retrofit
@@ -27,7 +26,7 @@ class ApiConfig {
                 BuildConfig.BaseURL + "/"
             }
 
-            val getRetrofit= Retrofit.Builder()
+            val getRetrofit = Retrofit.Builder()
                 .baseUrl(baseUrl)
                 .addConverterFactory(GsonConverterFactory.create())
                 .client(client)

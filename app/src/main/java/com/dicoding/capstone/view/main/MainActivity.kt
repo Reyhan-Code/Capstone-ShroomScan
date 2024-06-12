@@ -5,49 +5,22 @@ import android.os.Bundle
 import android.util.Log
 import android.view.View
 import android.view.inputmethod.EditorInfo
-import android.widget.Toast
-import androidx.activity.enableEdgeToEdge
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
-import androidx.lifecycle.LiveData
-import androidx.lifecycle.Observer
-import androidx.lifecycle.ViewModelProvider
-import androidx.lifecycle.liveData
-import androidx.lifecycle.map
 import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.recyclerview.widget.RecyclerView
 import com.dicoding.capstone.R
 import com.dicoding.capstone.adapter.ListFungusAdapter
-import com.dicoding.capstone.adapter.LoadingStateAdapter
-import com.dicoding.capstone.data.Result
 import com.dicoding.capstone.databinding.ActivityMainBinding
 import com.dicoding.capstone.factory.ViewModelFactory
-import com.dicoding.capstone.remote.api.ApiConfig
-import com.dicoding.capstone.remote.api.ApiService
-import com.dicoding.capstone.remote.database.FungusDb
-import com.dicoding.capstone.remote.database.fungus.FungusEntity
-import com.dicoding.capstone.remote.database.recipe.RecipeEntity
 import com.dicoding.capstone.remote.response.DataItem
-import com.dicoding.capstone.remote.response.FungusResponse
-import com.dicoding.capstone.remote.response.ItemsItem
-import com.dicoding.capstone.remote.response.ResepResponse
-import com.dicoding.capstone.repository.FungusRepository
 import com.dicoding.capstone.view.favorit.FavoriteActivity
 import com.dicoding.capstone.view.recipe.RecipeActivity
 import com.dicoding.capstone.view.scan.ScanActivity
-import com.google.gson.Gson
-import com.google.gson.JsonParser
-import com.google.gson.reflect.TypeToken
-import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.withContext
-import java.io.InputStreamReader
 
 class MainActivity : AppCompatActivity() {
 
-    private lateinit var binding : ActivityMainBinding
+    private lateinit var binding: ActivityMainBinding
 
     private val mainViewModel by viewModels<MainViewModel> {
         ViewModelFactory.getInstance(this)
@@ -69,9 +42,6 @@ class MainActivity : AppCompatActivity() {
 
         val itemDecoration = DividerItemDecoration(this, layoutManager.orientation)
         binding.rvList.addItemDecoration(itemDecoration)
-
-
-
 
         with(mainViewModel) {
             userData.observe(this@MainActivity) {
@@ -95,7 +65,7 @@ class MainActivity : AppCompatActivity() {
                 } else {
                     false
                 }
-                }
+            }
 
             binding.searchBar.setOnMenuItemClickListener { menuItem ->
                 when (menuItem.itemId) {
@@ -105,6 +75,7 @@ class MainActivity : AppCompatActivity() {
                         startActivity(intent)
                         true
                     }
+
                     else -> false
                 }
             }
@@ -114,8 +85,7 @@ class MainActivity : AppCompatActivity() {
 
         binding.btnScan.setOnClickListener { startScanActivity() }
         binding.btnRecipe.setOnClickListener { startRecipeActivity() }
-//        getAllFungus()
-  }
+    }
 
     private fun startScanActivity() {
         val intent = Intent(this, ScanActivity::class.java)
@@ -134,43 +104,6 @@ class MainActivity : AppCompatActivity() {
         adapter.submitList(users)
         binding.rvList.adapter = adapter
     }
-
-
-//    private suspend fun loadFungusFromApi(): List<FungusEntity> = withContext(Dispatchers.IO) {
-//        val apiService = ApiConfig.getApiService()
-//        return@withContext apiService.getFungusData(page = 1, size = 10)
-//    }
-//
-//    private fun getAllFungus(): LiveData<Result<List<FungusEntity>>> = liveData(Dispatchers.IO) {
-//        emit(Result.Loading)
-//        val recipeDao = FungusDb.getInstance(this@MainActivity).fungusDao()
-//        try {
-//            val fungusData = loadFungusFromApi()
-//            Log.d("Fungus", "Loaded fungus data: $fungusData")
-//            val recipeList = fungusData.map {
-//                FungusEntity(
-//                    it.id,
-//                    it.nama,
-//                    it.jenis,
-//                    it.deskripsi,
-//                    it.media_tanam,
-//                    it.gambar1,
-//                    it.gambar2,
-//                    it.gambar3
-//                )
-//            }
-//
-//            Log.d("Fungus", "Converted fungus data: $recipeList")
-//            recipeDao.deleteAll()
-//            recipeDao.insert(recipeList)
-//        } catch (e: Exception) {
-//            emit(Result.Error(e.message.toString()))
-//            return@liveData
-//        }
-//        val localData: LiveData<Result<List<FungusEntity>>> =
-//            recipeDao.getAllFungus().map { Result.Success(it) }
-//        emitSource(localData)
-//    }
 
 
     private fun showLoading(isLoading: Boolean) {

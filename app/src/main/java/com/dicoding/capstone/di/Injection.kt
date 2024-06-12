@@ -1,7 +1,6 @@
 package com.dicoding.capstone.di
 
 import android.content.Context
-import com.dicoding.capstone.remote.api.ApiConfig
 import com.dicoding.capstone.remote.database.FungusDb
 import com.dicoding.capstone.repository.FungusRepository
 

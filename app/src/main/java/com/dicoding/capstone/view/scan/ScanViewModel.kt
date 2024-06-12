@@ -13,7 +13,7 @@ import com.dicoding.capstone.view.result.ResultActivity
 import com.yalantis.ucrop.UCrop
 import java.io.File
 
-class ScanViewModel (application: Application) : AndroidViewModel(application){
+class ScanViewModel(application: Application) : AndroidViewModel(application) {
 
 
     private val _currentImageUri = MutableLiveData<Uri?>()
@@ -62,7 +62,6 @@ class ScanViewModel (application: Application) : AndroidViewModel(application){
             context.startActivity(intent)
         } ?: showToast(context.getString(R.string.image_classifier_failed))
     }
-
 
 
 }

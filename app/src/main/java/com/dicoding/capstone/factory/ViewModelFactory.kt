@@ -32,6 +32,7 @@ class ViewModelFactory(private val repository: FungusRepository) :
             modelClass.isAssignableFrom(FavoriteViewModel::class.java) -> {
                 FavoriteViewModel(repository) as T
             }
+
             else -> throw IllegalArgumentException("Unknown ViewModel class: " + modelClass.name)
         }
     }

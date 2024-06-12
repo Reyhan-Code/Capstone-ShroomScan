@@ -9,7 +9,7 @@ import kotlinx.parcelize.Parcelize
 
 @Entity(tableName = "fungus_db")
 @Parcelize
-class FungusEntity (
+class FungusEntity(
 
     @ColumnInfo(name = "id")
 
@@ -36,4 +36,4 @@ class FungusEntity (
 
     @ColumnInfo(name = "gambar3")
     var gambar3: String? = null,
-): Parcelable
+) : Parcelable

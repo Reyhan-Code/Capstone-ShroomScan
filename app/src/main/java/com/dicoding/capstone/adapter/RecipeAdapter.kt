@@ -2,7 +2,6 @@ package com.dicoding.capstone.adapter
 
 import android.annotation.SuppressLint
 import android.content.Intent
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.core.content.ContextCompat
@@ -17,8 +16,6 @@ import com.dicoding.capstone.view.recipe.detail.DetailRecipeActivity
 
 class RecipeAdapter(private val onFavoriteClick: (RecipeEntity) -> Unit) :
     ListAdapter<RecipeEntity, RecipeAdapter.MyViewHolder>(DIFF_CALLBACK) {
-
-
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyViewHolder {
         val binding = RecipeListBinding.inflate(LayoutInflater.from(parent.context), parent, false)
@@ -62,7 +59,6 @@ class RecipeAdapter(private val onFavoriteClick: (RecipeEntity) -> Unit) :
             itemView.setOnClickListener {
                 val intentDetailRecipe = Intent(itemView.context, DetailRecipeActivity::class.java)
                 intentDetailRecipe.putExtra("Recipe", recipe)
-                Log.d("RecipeAdapter", "Clicked on recipe: $recipe")
                 itemView.context.startActivity(intentDetailRecipe)
             }
         }
@@ -71,12 +67,18 @@ class RecipeAdapter(private val onFavoriteClick: (RecipeEntity) -> Unit) :
     companion object {
         val DIFF_CALLBACK: DiffUtil.ItemCallback<RecipeEntity> =
             object : DiffUtil.ItemCallback<RecipeEntity>() {
-                override fun areItemsTheSame(oldItem: RecipeEntity, newItem: RecipeEntity): Boolean {
+                override fun areItemsTheSame(
+                    oldItem: RecipeEntity,
+                    newItem: RecipeEntity
+                ): Boolean {
                     return oldItem.id == newItem.id
                 }
 
                 @SuppressLint("DiffUtilEquals")
-                override fun areContentsTheSame(oldItem: RecipeEntity, newItem: RecipeEntity): Boolean {
+                override fun areContentsTheSame(
+                    oldItem: RecipeEntity,
+                    newItem: RecipeEntity
+                ): Boolean {
                     return oldItem == newItem
                 }
             }

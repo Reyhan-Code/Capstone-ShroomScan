@@ -1,16 +1,16 @@
 package com.dicoding.capstone.view.favorit
 
+import android.content.Intent
 import android.os.Bundle
-import androidx.activity.enableEdgeToEdge
+import android.view.View
+import android.widget.Toast
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.dicoding.capstone.R
 import com.dicoding.capstone.adapter.RecipeAdapter
 import com.dicoding.capstone.databinding.ActivityFavoriteBinding
 import com.dicoding.capstone.factory.ViewModelFactory
+
 
 class FavoriteActivity : AppCompatActivity() {
 
@@ -19,6 +19,7 @@ class FavoriteActivity : AppCompatActivity() {
     private val viewModel by viewModels<FavoriteViewModel> {
         ViewModelFactory.getInstance(this)
     }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityFavoriteBinding.inflate(layoutInflater)
@@ -32,8 +33,24 @@ class FavoriteActivity : AppCompatActivity() {
             }
         }
 
-        viewModel.getFavoriteRecipe().observe(this) { favoriteCulinary ->
-            recipeAdapter.submitList(favoriteCulinary)
+        viewModel.getFavoriteRecipe().observe(this) { favoriteRecipe ->
+            recipeAdapter.submitList(favoriteRecipe)
+            if (favoriteRecipe.isNullOrEmpty()) {
+                binding.imgNoFavorites.visibility = View.VISIBLE
+                Toast.makeText(
+                    this,
+                    "Add Favorite Recipe",
+                    Toast.LENGTH_SHORT
+                ).show()
+            } else {
+                binding.imgNoFavorites.visibility = View.GONE
+            }
+        }
+
+        binding.btnLeft.setOnClickListener {
+            Intent(this, FavoriteActivity::class.java).also {
+                finish()
+            }
         }
 
         binding.rvRecipe.layoutManager = LinearLayoutManager(this)

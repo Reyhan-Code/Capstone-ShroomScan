@@ -23,7 +23,7 @@ import org.tensorflow.lite.task.vision.classifier.ImageClassifier
 class ImageClassifierHelper(
     var threshold: Float = 0.1f,
     var maxResults: Int = 3,
-    val modelName: String = "model_jamur_new.tflite",
+    val modelName: String = "cancer_classification.tflite",
     val context: Context,
     val classifierListener: ClassifierListener?
 ) {
@@ -35,7 +35,7 @@ class ImageClassifierHelper(
     }
 
     private fun setupImageClassifier() {
-       val optionsBuilder = ImageClassifier.ImageClassifierOptions.builder()
+        val optionsBuilder = ImageClassifier.ImageClassifierOptions.builder()
             .setScoreThreshold(threshold)
             .setMaxResults(maxResults)
         val baseOptionsBuilder = BaseOptions.builder()
@@ -85,7 +85,7 @@ class ImageClassifierHelper(
 
     private fun imageProcessor(bitmap: Bitmap): TensorImage = ImageProcessor.Builder()
         .add(ResizeOp(224, 224, ResizeOp.ResizeMethod.NEAREST_NEIGHBOR))
-        .add(CastOp(DataType.FLOAT32))
+        .add(CastOp(DataType.UINT8))
         .build()
         .process(TensorImage.fromBitmap(bitmap))
 

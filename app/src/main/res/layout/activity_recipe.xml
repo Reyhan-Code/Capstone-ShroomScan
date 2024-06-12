@@ -5,7 +5,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/bg"
+    android:background="@drawable/custom_background"
     tools:context=".view.recipe.RecipeActivity">
 
     <com.google.android.material.search.SearchBar

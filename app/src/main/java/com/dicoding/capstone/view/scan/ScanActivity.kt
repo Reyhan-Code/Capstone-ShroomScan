@@ -44,7 +44,7 @@ class ScanActivity : AppCompatActivity() {
         viewModel.toastMessage.observe(this, Observer { message ->
             message?.let { showToast(it) }
         })
-}
+    }
 
     private fun startGallery() {
         launcherGallery.launch(PickVisualMediaRequest(ActivityResultContracts.PickVisualMedia.ImageOnly))
@@ -73,7 +73,7 @@ class ScanActivity : AppCompatActivity() {
         if (isSuccess) {
             showImage()
             viewModel.currentImageUri.value?.let { viewModel.startUCrop(it, this) }
-        }else {
+        } else {
             Log.d("Photo Picker", "No media selected")
         }
     }

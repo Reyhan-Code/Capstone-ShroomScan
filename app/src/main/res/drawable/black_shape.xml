@@ -2,7 +2,7 @@
 <!-- res/drawable/black_shape.xml -->
 <shape xmlns:android="http://schemas.android.com/apk/res/android">
     <gradient
-        android:startColor="#B9000000"
+        android:startColor="#EE000000"
         android:endColor="#00000000"
         android:angle="90"/>
 </shape>

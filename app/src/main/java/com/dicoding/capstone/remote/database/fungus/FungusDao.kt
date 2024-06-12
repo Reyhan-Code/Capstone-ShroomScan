@@ -1,15 +1,13 @@
 package com.dicoding.capstone.remote.database.fungus
 
 import androidx.lifecycle.LiveData
-import androidx.paging.PagingSource
 import androidx.room.Dao
 import androidx.room.Delete
 import androidx.room.Insert
 import androidx.room.OnConflictStrategy
 import androidx.room.Query
 import androidx.room.Update
-import com.dicoding.capstone.remote.database.recipe.RecipeEntity
-import com.dicoding.capstone.remote.response.FungusResponse
+
 
 
 @Dao

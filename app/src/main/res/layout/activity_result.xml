@@ -71,7 +71,7 @@
                     android:layout_marginEnd="10dp"
                     android:layout_marginBottom="50dp"
                     android:fontFamily="@font/inter"
-                    android:text="@string/detail_planting"
+                    tools:text="@string/detail_planting"
                     android:textColor="@color/black"
                     android:textSize="15sp" />
             </LinearLayout>

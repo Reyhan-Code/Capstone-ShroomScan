@@ -6,7 +6,7 @@ import com.dicoding.capstone.remote.database.recipe.RecipeEntity
 import com.dicoding.capstone.repository.FungusRepository
 import kotlinx.coroutines.launch
 
-class DetailRecipeViewModel( private val repository: FungusRepository) : ViewModel() {
+class DetailRecipeViewModel(private val repository: FungusRepository) : ViewModel() {
 
     fun saveRecipe(recipe: RecipeEntity) {
         viewModelScope.launch {

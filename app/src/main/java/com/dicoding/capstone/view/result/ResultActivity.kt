@@ -3,11 +3,7 @@ package com.dicoding.capstone.view.result
 import android.net.Uri
 import android.os.Bundle
 import android.util.Log
-import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
-import com.dicoding.capstone.R
 import com.dicoding.capstone.databinding.ActivityResultBinding
 import com.dicoding.capstone.helper.ImageClassifierHelper
 import org.tensorflow.lite.task.vision.classifier.Classifications

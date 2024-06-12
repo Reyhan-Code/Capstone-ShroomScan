@@ -7,8 +7,6 @@ import android.view.MenuItem
 import android.widget.Toolbar
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.liveData
 import androidx.lifecycle.map
@@ -169,6 +167,7 @@ class RecipeActivity : AppCompatActivity() {
                         Log.d("RecipeActivity", "Search results loaded successfully")
                         (binding.rvRecipe.adapter as RecipeAdapter).submitList(result.data)
                     }
+
                     is Result.Error -> {
                         Log.e("RecipeActivity", "Error searching recipes: ${result.error}")
                     }

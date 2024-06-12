@@ -1,18 +1,15 @@
 package com.dicoding.capstone.view.detail
 
+import android.content.Intent
 import android.os.Bundle
+import android.util.Log
 import android.view.View
-import android.widget.Toast
-import androidx.activity.enableEdgeToEdge
 import androidx.activity.viewModels
-import androidx.annotation.StringRes
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
 import com.bumptech.glide.Glide
-import com.dicoding.capstone.R
 import com.dicoding.capstone.databinding.ActivityDetailFungusBinding
-import com.dicoding.capstone.remote.response.DataItem
+import com.dicoding.capstone.remote.response.Data
+
 
 class DetailFungusActivity : AppCompatActivity() {
 
@@ -21,29 +18,43 @@ class DetailFungusActivity : AppCompatActivity() {
     }
 
     private val detailViewModel by viewModels<DetailFungusViewModel>()
-    private var detailResponse = DataItem()
+    private var detailResponse = Data()
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(binding.root)
         supportActionBar?.hide()
+        setContentView(binding.root)
 
         val usernameArgs = intent.extras?.getString(ID)
+        if (usernameArgs == null) {
+            finish()
+            return
+        }
+
+        binding.btnLeft.setOnClickListener {
+            Intent(this, DetailFungusActivity::class.java).also {
+                finish()
+            }
+        }
 
         with(detailViewModel) {
-            getUserDetail(usernameArgs!!)
+            getUserDetail(usernameArgs)
             isLoading.observe(this@DetailFungusActivity) { showLoading(it) }
             detailuser.observe(this@DetailFungusActivity) { data ->
-                setFungus(data)
-                detailResponse = data
+                if (data != null) {
+                    setFungus(data)
+                    detailResponse = data
+                } else {
+                    Log.e("DetailFungusActivity", "No data received")
+                }
             }
         }
     }
 
-    private fun setFungus(data: DataItem) {
-
+    private fun setFungus(data: Data) {
         with(binding) {
+            nameDetail.text = data.nama
             detailNameFungus.text = data.nama
             detailToxicFungus.text = data.jenis
             detailIntroduction.text = data.deskripsi
@@ -54,11 +65,7 @@ class DetailFungusActivity : AppCompatActivity() {
     }
 
     private fun showLoading(isLoading: Boolean) {
-        if (isLoading) {
-            binding.progresBar.visibility = View.VISIBLE
-        } else {
-            binding.progresBar.visibility = View.GONE
-        }
+        binding.progresBar.visibility = if (isLoading) View.VISIBLE else View.GONE
     }
 
 

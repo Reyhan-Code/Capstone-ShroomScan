@@ -22,6 +22,7 @@ class DetailRecipeActivity : AppCompatActivity() {
     private val viewModel by viewModels<DetailRecipeViewModel> {
         ViewModelFactory.getInstance(this)
     }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
