@@ -12,6 +12,6 @@
 | Muhamad Fadillah | C193D4KY1041 | [GitHUb](https://github.com/Chernoboysss) |
 | Susi Susilawati | M335D4KX1629 | - |
 | Faraj Azhar Maulana | M007D4KY1754 | - |
-| Rafif Ramadan | M007D4KY2234 | - |
+| Rafif Ramadan | M007D4KY2234 | [GitHub](https://github.com/RafifR28) |
 | Rafi Fadhila Ramadhani | A193D4KY3796 | - |
 | Reyhan Afif Fahri | A490D4KY4271	 | [GitHUb](https://github.com/Reyhan-Code) |
