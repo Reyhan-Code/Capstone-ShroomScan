@@ -4,6 +4,11 @@
     <img src="https://readme-typing-svg.herokuapp.com/?font=Righteous&size=35&center=true&vCenter=true&width=500&height=70&duration=4000&lines=Shroom+Scan+🍄;"/>
 </h1>
 
+# Within each mushroom, there is a natural wonder and a richness of flavor!
+
+<p align="center" width="100%"><img width="15%" src="https://github.com/Reyhan-Code/ujicoba/assets/126700421/34a2b19f-450e-4435-bd06-50364d4abce5"></p>
+ShroomScan is a cutting-edge mobile application engineered to revolutionize the way individuals identify and categorize mushrooms based on their edibility and potential toxicity
+
 ## Capstone Project Team:
 
 | Name | Bangkit-ID | GitHub | LinkedIn |
