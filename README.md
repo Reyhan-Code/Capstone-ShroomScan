@@ -1,5 +1,4 @@
-![image](https://github.com/Reyhan-Code/Capstone-ShroomScan/assets/66911524/0778af8c-a855-4770-aba0-2b44246ab65b)# Capstone-ShroomScan
-
+# Capstone-ShroomScan
 <h1 align="center">
     <img src="https://readme-typing-svg.herokuapp.com/?font=Righteous&size=35&center=true&vCenter=true&width=500&height=70&duration=4000&lines=Shroom+Scan+🍄;"/>
 </h1>
