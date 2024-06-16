@@ -6,7 +6,7 @@
 
 # Within each mushroom, there is a natural wonder and a richness of flavor!
 
-<p align="center" width="100%"><img width="25%" src="https://github.com/Reyhan-Code/ujicoba/assets/126700421/34a2b19f-450e-4435-bd06-50364d4abce5"></p>
+<p align="center" width="100%"><img width="25%" src="https://storage.googleapis.com/gambar-jamur/icon.png"></p>
 ShroomScan is a cutting-edge mobile application engineered to revolutionize the way individuals identify and categorize mushrooms based on their edibility and potential toxicity
 
 ## Capstone Project Team:
