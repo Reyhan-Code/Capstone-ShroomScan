@@ -1,4 +1,4 @@
-# Capstone-ShroomScan
+![image](https://github.com/Reyhan-Code/Capstone-ShroomScan/assets/66911524/0778af8c-a855-4770-aba0-2b44246ab65b)# Capstone-ShroomScan
 
 <h1 align="center">
     <img src="https://readme-typing-svg.herokuapp.com/?font=Righteous&size=35&center=true&vCenter=true&width=500&height=70&duration=4000&lines=Shroom+Scan+🍄;"/>
@@ -17,6 +17,6 @@ ShroomScan is a cutting-edge mobile application engineered to revolutionize the 
 | Muhamad Fadillah | C193D4KY1041 | [GitHUb](https://github.com/Chernoboysss) |-|
 | Susi Susilawati | M335D4KX1629 | - |-|
 | Faraj Azhar Maulana | M007D4KY1754 | - |-|
-| Rafif Ramadan | M007D4KY2234 | [GitHub](https://github.com/RafifR28) |-|
+| Rafif Ramadan | M007D4KY2234 | [GitHub](https://github.com/RafifR28) |[LinkedIn](https://www.linkedin.com/in/rafif-ramadan-4a0a12220/)|
 | Rafi Fadhila Ramadhani | A193D4KY3796 | - |-|
 | Reyhan Afif Fahri | A490D4KY4271	 | [GitHUb](https://github.com/Reyhan-Code) |[LinkedIn](https://www.linkedin.com/in/reyhan-afif-fahri-7b4072220/)|
