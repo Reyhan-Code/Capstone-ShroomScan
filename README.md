@@ -21,7 +21,7 @@ The documentation of <b>ShroomScan</b> application in Bangkit Capstone Project 2
 | Name | Bangkit-ID | GitHub | LinkedIn |
 |--------------------------------|------------|----------------|----------------|
 | Mohammad Zaki Ibnu Marhaban | C335D4KY0343 | [GitHUb](https://github.com/mohammadzaki18) |-|
-| Muhamad Fadillah | C193D4KY1041 | [GitHUb](https://github.com/Chernoboysss) |-|
+| Muhamad Fadillah | C193D4KY1041 | [GitHUb](https://github.com/Chernoboysss) |[LinkedIn](https://www.linkedin.com/in/muhamad-fadillah-15963b2ba/)|
 | Susi Susilawati | M335D4KX1629 | - |-|
 | Faraj Azhar Maulana | M007D4KY1754 | - |-|
 | Rafif Ramadan | M007D4KY2234 | [GitHub](https://github.com/RafifR28) |[LinkedIn](https://www.linkedin.com/in/rafif-ramadan-4a0a12220/)|
