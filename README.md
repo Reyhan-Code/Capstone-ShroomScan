@@ -8,6 +8,10 @@
 <p align="center" width="100%"><img width="25%" src="https://storage.googleapis.com/gambar-jamur/icon.png"></p>
 ShroomScan is a cutting-edge mobile application engineered to revolutionize the way individuals identify and categorize mushrooms based on their edibility and potential toxicity
 
+## View-APK
+The documentation of <b>Pet2Home</b> application in Bangkit Capstone Project 2022
+![Slide 16_9 - 2](https://user-images.githubusercontent.com/63504249/173284212-870aa918-2234-463e-898f-da07685d10ed.png)
+
 # Demo-Aplication
 [Download Here](https://drive.google.com/file/d/17sWxC5X-OSdIR3twoFSaMX2pgCNXFToj/view?usp=sharing)
 
