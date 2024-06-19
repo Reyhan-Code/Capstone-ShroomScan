@@ -9,7 +9,7 @@
 ShroomScan is a cutting-edge mobile application engineered to revolutionize the way individuals identify and categorize mushrooms based on their edibility and potential toxicity
 
 # Demo-Aplication
-[Download Here](https://drive.google.com/drive/folders/1DqzdCW5WbFuVhPXNG47CUf5ZaDmEapxt?usp=sharing)
+[Download Here](https://drive.google.com/file/d/17sWxC5X-OSdIR3twoFSaMX2pgCNXFToj/view?usp=sharing)
 
 
 ## Capstone Project Team:
