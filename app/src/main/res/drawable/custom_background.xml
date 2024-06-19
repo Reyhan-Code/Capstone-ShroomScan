@@ -10,12 +10,12 @@
         </shape>
 
     </item>
-    <item android:top="195dp">
+    <item android:top="225dp">
         <shape android:shape="rectangle">
             <solid android:color="#FFFFFF" />
             <corners
-                android:topLeftRadius="30dp"
-                android:topRightRadius="30dp"  />
+                android:topLeftRadius="20dp"
+                android:topRightRadius="20dp"  />
         </shape>
     </item>
 

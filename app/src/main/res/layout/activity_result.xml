@@ -38,42 +38,168 @@
                     android:contentDescription="@string/result"
                     android:scaleType="centerCrop"
                     android:src="@drawable/tiram"
-                    app:civ_border_width="4dp"
-                    app:civ_border_color="@color/white"/>
+                    app:civ_border_color="@color/white"
+                    app:civ_border_width="4dp" />
 
             </FrameLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="15dp"
-                android:background="@drawable/rounded_background"
-                android:orientation="vertical">
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:background="@drawable/background_with_stroke"
+                android:orientation="vertical"
+                android:padding="7dp">
 
                 <TextView
                     android:id="@+id/result_text"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="10dp"
-                    android:layout_marginTop="15dp"
+                    android:layout_marginTop="1dp"
                     android:fontFamily="@font/inter_bold"
                     android:text="@string/result"
                     android:textColor="@color/black"
                     android:textSize="20sp"
                     android:textStyle="bold" />
 
-                <TextView
-                    android:id="@+id/detail_planting"
+
+                <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="10dp"
                     android:layout_marginTop="10dp"
                     android:layout_marginEnd="10dp"
-                    android:layout_marginBottom="50dp"
-                    android:fontFamily="@font/inter"
-                    tools:text="@string/detail_planting"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/result"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.3"
+                        android:fontFamily="@font/inter"
+                        android:text="@string/result_"
+                        android:textColor="@color/black"
+                        android:textSize="15sp" />
+
+                    <TextView
+                        android:id="@+id/result_toxic"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/inter"
+                        android:textColor="@color/black"
+                        android:textSize="15sp"
+                        tools:text="@string/result_name" />
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/result_jenis"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.3"
+                        android:fontFamily="@font/inter"
+                        android:text="@string/result_jenis"
+                        android:textColor="@color/black"
+                        android:textSize="15sp" />
+
+                    <TextView
+                        android:id="@+id/result_name"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/inter"
+                        android:textColor="@color/black"
+                        android:textSize="15sp"
+                        tools:text="@string/result_name" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/result_persen"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.3"
+                        android:fontFamily="@font/inter"
+                        android:text="@string/result_persentase_"
+                        android:textColor="@color/black"
+                        android:textSize="15sp" />
+
+                    <TextView
+                        android:id="@+id/result_persentase"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/inter"
+                        android:textColor="@color/black"
+                        android:textSize="15sp"
+                        tools:text="@string/result_persentase" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="10dp"
+                android:background="@drawable/background_with_stroke"
+                android:orientation="vertical"
+                android:padding="7dp">
+
+                <TextView
+                    android:id="@+id/result_desc"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="1dp"
+                    android:fontFamily="@font/inter_bold"
+                    android:text="@string/result_desc"
                     android:textColor="@color/black"
-                    android:textSize="15sp" />
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/result_des"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.3"
+                        android:fontFamily="@font/inter"
+                        android:textColor="@color/black"
+                        android:textSize="15sp"
+                        tools:text="@string/result_" />
+
+
+                </LinearLayout>
+
+
             </LinearLayout>
         </LinearLayout>
 

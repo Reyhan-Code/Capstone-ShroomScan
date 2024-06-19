@@ -19,7 +19,9 @@ android {
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
 
 
-        buildConfigField("String", "BaseURL", "\"https://shroomscan-n54b4qblpq-et.a.run.app/\"")
+        buildConfigField("String", "ApiKey", "\"mUSHroom223312\"")
+        buildConfigField("String", "BaseURL", "\"https://shroomscan-72txqvxpya-et.a.run.app/\"")
+
     }
 
     buildTypes {

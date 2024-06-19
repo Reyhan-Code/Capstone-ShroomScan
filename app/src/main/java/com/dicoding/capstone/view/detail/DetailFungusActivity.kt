@@ -55,12 +55,12 @@ class DetailFungusActivity : AppCompatActivity() {
     private fun setFungus(data: Data) {
         with(binding) {
             nameDetail.text = data.nama
-            detailNameFungus.text = data.nama
             detailToxicFungus.text = data.jenis
             detailIntroduction.text = data.deskripsi
             detailPlanting.text = data.mediaTanam
             Glide.with(root.context).load(data.gambar1).into(tvDetailImage)
             Glide.with(root.context).load(data.gambar2).into(detailImg2)
+            Glide.with(root.context).load(data.gambar3).into(gambar3)
         }
     }
 

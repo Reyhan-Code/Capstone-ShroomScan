@@ -1,6 +1,7 @@
 package com.dicoding.capstone.remote.api
 
 import com.dicoding.capstone.BuildConfig
+import okhttp3.Interceptor
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Retrofit
@@ -16,8 +17,16 @@ class ApiConfig {
                 } else {
                     HttpLoggingInterceptor.Level.NONE
                 }
+            val interceptor = Interceptor { chain ->
+                chain.proceed(
+                    chain.request().newBuilder()
+                        .addHeader("api-key", BuildConfig.ApiKey)
+                        .build()
+                )
+            }
             val client = OkHttpClient.Builder()
                 .addInterceptor(loggingInterceptor)
+                .addInterceptor(interceptor)
                 .build()
 
             val baseUrl = if (BuildConfig.BaseURL.endsWith("/")) {
