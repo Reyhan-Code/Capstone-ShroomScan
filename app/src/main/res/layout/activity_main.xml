@@ -84,7 +84,7 @@
         android:layout_below="@+id/btn_scan"
         android:layout_alignParentStart="true"
         android:layout_alignParentEnd="true"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="32dp"
         android:text="@string/explore"
         android:textColor="@color/white"
         android:textSize="20sp"
@@ -93,8 +93,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.046"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.214" />
+        app:layout_constraintTop_toBottomOf="@+id/btn_scan"
+        app:layout_constraintVertical_bias="0.0" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rv_list"
@@ -102,6 +102,7 @@
         android:layout_height="0dp"
         android:layout_marginTop="25dp"
         android:layout_marginEnd="8dp"
+        tools:listitem="@layout/item_list"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="@id/text_view"
