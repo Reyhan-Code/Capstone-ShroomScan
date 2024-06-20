@@ -6,7 +6,10 @@
 # Within each mushroom, there is a natural wonder and a richness of flavor!
 
 <p align="center" width="100%"><img width="25%" src="https://github.com/Reyhan-Code/ujicoba/blob/120da987c71b9ffc838aae81397ec43b472736fa/icon.png"></p>
-ShroomScan is a cutting-edge mobile application engineered to revolutionize the way individuals identify and categorize mushrooms based on their edibility and potential toxicity
+ShroomScan is a cutting-edge mobile application engineered to revolutionize the way individuals identify and categorize mushrooms based on their edibility and potential toxicity. By harnessing the power of state-of-the-art image recognition algorithms and machine learning technologies, ShroomScan offers users a seamless and reliable solution for analyzing mushrooms in real-time. The application boasts a vast and meticulously curated database comprising a wide array of mushroom species, encompassing both edible delicacies and potentially harmful varieties.
+<br><br>
+The application prioritizes user safety and awareness, aiming to mitigate the risks associated with mushroom foraging and consumption. Whether embarking on a hiking adventure, exploring the wilderness, or simply foraging for wild mushrooms, ShroomScan equips users with the knowledge and tools necessary to make informed decisions about the mushrooms they encounter.
+
 
 ## View-APK
 The documentation of <b>ShroomScan</b> application in Bangkit Capstone Project 2024
