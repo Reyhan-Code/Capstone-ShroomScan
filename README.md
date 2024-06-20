@@ -10,7 +10,7 @@ ShroomScan is a cutting-edge mobile application engineered to revolutionize the 
 
 ## View-APK
 The documentation of <b>ShroomScan</b> application in Bangkit Capstone Project 2024
-![Slide 16_9 - 2](https://github.com/Reyhan-Code/ujicoba/blob/df829154a26699db0274cace0a4d626dca3eaf31/fithub.png)
+![Slide 16_9 - 2](https://github.com/Reyhan-Code/ujicoba/blob/a0c493af2862b7bcbb3eef98d8c4ac28fd48515d/fithub.png)
 
 # Demo-Aplication
 [Download Here](https://drive.google.com/file/d/17sWxC5X-OSdIR3twoFSaMX2pgCNXFToj/view?usp=sharing)
