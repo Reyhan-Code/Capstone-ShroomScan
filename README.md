@@ -25,7 +25,6 @@ The source code of Android app of ShroomScan using Kotlin in order to complete B
 * #### Dependencies :
   - [Lifecycle & Livedata](https://developer.android.com/jetpack/androidx/releases/lifecycle)
   - [kotlinx-coroutines](https://developer.android.com/kotlin/coroutines)    
-  - [Retrofit 2](https://square.github.io/retrofit/)   
-  - [StickyScrollView Library](https://github.com/amarjain07/StickyScrollView)    
+  - [Retrofit 2](https://square.github.io/retrofit/)    
   - [Ok Http 3](https://square.github.io/okhttp/) 
   - [Place API](https://developers.google.com/maps/documentation/places/android-sdk) 
