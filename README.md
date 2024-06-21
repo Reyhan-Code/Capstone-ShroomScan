@@ -1,7 +1,7 @@
 # BANGKIT FINAL PROJECT
 # Shroomscan
 Work on this model project using Google Colab (limited use of our hardware requirements on a Laptop)
-Link to Colab:
+- Link to Colab:
 https://colab.research.google.com/drive/1-44mK2lAB-ZgctTWVelFoS0SulvyvJx9?usp=sharing
 # 1. Load Datasets
    - Load datasets from our hosted dataset to Google Drive. 
@@ -33,4 +33,4 @@ https://colab.research.google.com/drive/1-44mK2lAB-ZgctTWVelFoS0SulvyvJx9?usp=sh
        - `val_accuracy: 99%`
 # 4. Saved the Model to Google Drive
    - Saved the model (*h5 format) to Google Drive:
-     
+     https://drive.google.com/file/d/1XPeWK6pkYkSz8RGRrzKv6F2latgjGJ_m/view?usp=sharing
