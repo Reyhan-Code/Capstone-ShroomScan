@@ -2,7 +2,7 @@
 # Shroomscan
 Work on this model project using Google Colab (limited use of our hardware requirements on a Laptop)
 - Link to Colab:
-https://colab.research.google.com/drive/1-44mK2lAB-ZgctTWVelFoS0SulvyvJx9?usp=sharing
+https://colab.research.google.com/drive/1n1sfY0MxUw8J3z4u-LhbTHX7vKuGsJwN?usp=sharing
 # 1. Load Datasets
    - Load datasets from our hosted dataset to Google Drive. 
      Here's the link:
